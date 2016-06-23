@@ -5,6 +5,8 @@
  */
 package Presentacion;
 
+import com.sun.awt.AWTUtilities;
+
 /**
  *
  * @author kandskat
@@ -15,8 +17,10 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
      * Creates new form FrmGestion_UPS_Datos
      */
     public FrmGestion_UPS_Datos() {
+        this.setUndecorated(true);
         initComponents();
         this.setLocationRelativeTo(null);
+        AWTUtilities.setWindowOpaque(this, false);
         jScrollPane1.setVisible(false);
     }
 
@@ -42,6 +46,7 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         Lbl_UPS_Datos_Panel_01 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
