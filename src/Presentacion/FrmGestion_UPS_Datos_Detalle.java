@@ -5,6 +5,8 @@
  */
 package Presentacion;
 
+import com.sun.awt.AWTUtilities;
+
 /**
  *
  * @author kandskat
@@ -15,7 +17,11 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
      * Creates new form Frm_Gestion_UPS_Datos_Detalle
      */
     public FrmGestion_UPS_Datos_Detalle() {
+        this.setUndecorated(true);
         initComponents();
+        this.setLocationRelativeTo(null);
+        AWTUtilities.setWindowOpaque(this, false);
+        
     }
 
     /**
@@ -45,13 +51,28 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Lbl_UPS_Datos_Detalle_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 120, 30));
+
+        Lbl_UPS_Datos_Detalle_Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, 120, 30));
+
+        Lbl_UPS_Datos_Detalle_Ubicar_Direccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicar_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, 120, 30));
+
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 70, 60));
+
+        Lbl_UPS_Datos_Detalle_Email.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
+
+        Lbl_UPS_Datos_Detalle_ActualizarD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_ActualizarD, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
+
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicacion_Photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 390, 320));
 
@@ -77,7 +98,7 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         getContentPane().add(Txt_UPS_Datos_Detalle_MarcaModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 120, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmUpsDatos.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
