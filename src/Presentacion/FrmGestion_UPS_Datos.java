@@ -87,7 +87,6 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 960, 220));
 
         Lbl_UPS_Datos_Panel_01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FramePrincipalUD.png"))); // NOI18N
-        Lbl_UPS_Datos_Panel_01.setText("jLabel1");
         getContentPane().add(Lbl_UPS_Datos_Panel_01, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1083, -1));
 
         pack();
@@ -95,6 +94,7 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
 
     private void Lbl_UPS_Datos_BuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_BuscarMouseClicked
         // TODO add your handling code here:
+        jScrollPane1.setVisible(true);
     }//GEN-LAST:event_Lbl_UPS_Datos_BuscarMouseClicked
 
     /**
