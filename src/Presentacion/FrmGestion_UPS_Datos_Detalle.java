@@ -27,6 +27,14 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Lbl_UPS_Datos_Detalle_Buscar = new javax.swing.JLabel();
+        Lbl_UPS_Datos_Detalle_Eventos = new javax.swing.JLabel();
+        Lbl_UPS_Datos_Detalle_Ubicar_Direccion = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        Lbl_UPS_Datos_Detalle_Email = new javax.swing.JLabel();
+        Lbl_UPS_Datos_Detalle_ActualizarD = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Lbl_UPS_Datos_Detalle_Ubicacion_Photo = new javax.swing.JLabel();
         Txt_UPS_Datos_Detalle_Buscar = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_Direccion = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_NroATM = new javax.swing.JTextField();
@@ -38,6 +46,14 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(Lbl_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 120, 30));
+        getContentPane().add(Lbl_UPS_Datos_Detalle_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, 120, 30));
+        getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicar_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, 120, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 70, 60));
+        getContentPane().add(Lbl_UPS_Datos_Detalle_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
+        getContentPane().add(Lbl_UPS_Datos_Detalle_ActualizarD, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
+        getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicacion_Photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 390, 320));
 
         Txt_UPS_Datos_Detalle_Buscar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(Txt_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 300, -1));
@@ -103,6 +119,12 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Lbl_UPS_Datos_Detalle_ActualizarD;
+    private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Buscar;
+    private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Email;
+    private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Eventos;
+    private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Ubicacion_Photo;
+    private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Ubicar_Direccion;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_Buscar;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_Capacidad;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_Direccion;
@@ -111,5 +133,7 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_MskSr;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_NroATM;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }
