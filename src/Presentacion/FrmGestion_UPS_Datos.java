@@ -67,7 +67,6 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         getContentPane().add(Lbl_UPS_Datos_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 120, 30));
 
         Txt_UPS_Datos_Buscar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        Txt_UPS_Datos_Buscar.setText("jTextField1");
         Txt_UPS_Datos_Buscar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(Txt_UPS_Datos_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 290, 20));
 
