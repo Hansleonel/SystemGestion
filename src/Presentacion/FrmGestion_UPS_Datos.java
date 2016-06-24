@@ -117,6 +117,7 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public static String valorfila="";
     private void Lbl_UPS_Datos_BuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_BuscarMouseClicked
         // TODO add your handling code here:
         jScrollPane1.setVisible(true);

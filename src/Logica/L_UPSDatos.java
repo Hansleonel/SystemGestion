@@ -65,13 +65,13 @@ public class L_UPSDatos {
                 registr[15]=rs.getString("Nro_Serie_UPS");
                 registr[16]=rs.getString("Fecha_Garantia");
                 registr[17]=rs.getString("Estado_Garantia");
-                registr[18]=rs.getString("Periodo de Garantia");
+                registr[18]=rs.getString("Periodo_de_Garantia");
                 registr[19]=rs.getString("Propietario");
                 registr[20]=rs.getString("ProveedorUPS");
                 registr[21]=rs.getString("Provincia_UPS");
                 registr[22]=rs.getString("Ciudad_Distrito_UPS");
                 registr[23]=rs.getString("Territorio_UPS");
-                registr[24]=rs.getString("Mantemiento_UPS");
+                registr[24]=rs.getString("Mantenimiento_UPS");
                 
                 totalregitrs = totalregitrs + 1;
                 
