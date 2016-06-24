@@ -5,7 +5,10 @@
  */
 package Presentacion;
 
+import Logica.L_UPSDatos;
 import com.sun.awt.AWTUtilities;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -87,6 +90,7 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         Txt_UPS_Datos_Buscar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(Txt_UPS_Datos_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, 290, 20));
 
+        Tbl_UPS_Datos_Mostrando.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 12)); // NOI18N
         Tbl_UPS_Datos_Mostrando.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -116,6 +120,16 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
     private void Lbl_UPS_Datos_BuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_BuscarMouseClicked
         // TODO add your handling code here:
         jScrollPane1.setVisible(true);
+        try {
+            DefaultTableModel model;
+            L_UPSDatos func = new L_UPSDatos();
+            model=func.MostrandoDatos(Txt_UPS_Datos_Buscar.getText());
+            
+            Tbl_UPS_Datos_Mostrando.setModel(model);
+            
+        } catch (Exception e) {
+            JOptionPane.showConfirmDialog(rootPane, e);
+        }
     }//GEN-LAST:event_Lbl_UPS_Datos_BuscarMouseClicked
 
     private void Tbl_UPS_Datos_MostrandoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tbl_UPS_Datos_MostrandoMouseClicked
