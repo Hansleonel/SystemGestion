@@ -33,6 +33,8 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         Lbl_UPS_Datos_Detalle_Buscar = new javax.swing.JLabel();
         Lbl_UPS_Datos_Detalle_Eventos = new javax.swing.JLabel();
         Lbl_UPS_Datos_Detalle_Ubicar_Direccion = new javax.swing.JLabel();
@@ -41,18 +43,32 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         Lbl_UPS_Datos_Detalle_ActualizarD = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         Lbl_UPS_Datos_Detalle_Ubicacion_Photo = new javax.swing.JLabel();
+        Txt_UPS_Datos_Detalle_Capacidad = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_Buscar = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_Direccion = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_NroATM = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_IP = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_MskSr = new javax.swing.JTextField();
-        Txt_UPS_Datos_Detalle_Capacidad = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_MarcaModel = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
         Lbl_UPS_Datos_Detalle_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 120, 30));
@@ -76,32 +92,49 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicacion_Photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 390, 320));
 
-        Txt_UPS_Datos_Detalle_Buscar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 300, -1));
-
-        Txt_UPS_Datos_Detalle_Direccion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_UPS_Datos_Detalle_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 110, -1));
-
-        Txt_UPS_Datos_Detalle_NroATM.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_UPS_Datos_Detalle_NroATM, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 120, -1));
-
-        Txt_UPS_Datos_Detalle_IP.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_UPS_Datos_Detalle_IP, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 120, -1));
-
-        Txt_UPS_Datos_Detalle_MskSr.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_UPS_Datos_Detalle_MskSr, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 120, -1));
-
+        Txt_UPS_Datos_Detalle_Capacidad.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Txt_UPS_Datos_Detalle_Capacidad.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(Txt_UPS_Datos_Detalle_Capacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 110, -1));
 
-        Txt_UPS_Datos_Detalle_MarcaModel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_UPS_Datos_Detalle_MarcaModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 120, -1));
+        Txt_UPS_Datos_Detalle_Buscar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_UPS_Datos_Detalle_Buscar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 300, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmUpsDatos.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 600));
+        Txt_UPS_Datos_Detalle_Direccion.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_UPS_Datos_Detalle_Direccion.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_UPS_Datos_Detalle_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 110, -1));
+
+        Txt_UPS_Datos_Detalle_NroATM.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_UPS_Datos_Detalle_NroATM.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_UPS_Datos_Detalle_NroATM, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 120, -1));
+
+        Txt_UPS_Datos_Detalle_IP.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_UPS_Datos_Detalle_IP.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_UPS_Datos_Detalle_IP, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 120, -1));
+
+        Txt_UPS_Datos_Detalle_MskSr.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_UPS_Datos_Detalle_MskSr.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_UPS_Datos_Detalle_MskSr, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 120, -1));
+
+        Txt_UPS_Datos_Detalle_MarcaModel.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_UPS_Datos_Detalle_MarcaModel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_UPS_Datos_Detalle_MarcaModel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 120, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmUpsDetalle.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        setExtendedState(FrmGestion_UPS_Datos_Detalle.CROSSHAIR_CURSOR);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -154,6 +187,8 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_MskSr;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_NroATM;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables

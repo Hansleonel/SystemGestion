@@ -77,6 +77,12 @@ public class FrmGestion_Login extends javax.swing.JFrame {
         Txt_Name_Login.setForeground(new java.awt.Color(255, 255, 255));
         Txt_Name_Login.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(Txt_Name_Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 230, 50));
+
+        FrmGestion_Login_Min.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FrmGestion_Login_MinMouseClicked(evt);
+            }
+        });
         getContentPane().add(FrmGestion_Login_Min, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 60, 30));
 
         FrmGestion_Login_Close.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -137,6 +143,11 @@ public class FrmGestion_Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_FrmGestion_Login_CloseMouseClicked
+
+    private void FrmGestion_Login_MinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FrmGestion_Login_MinMouseClicked
+        // TODO add your handling code here:
+        setExtendedState(FrmGestion_Login.CROSSHAIR_CURSOR);
+    }//GEN-LAST:event_FrmGestion_Login_MinMouseClicked
 
     /**
      * @param args the command line arguments

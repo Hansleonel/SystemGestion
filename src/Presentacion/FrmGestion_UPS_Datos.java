@@ -48,7 +48,19 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
+
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
         Lbl_UPS_Datos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -86,6 +98,11 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        Tbl_UPS_Datos_Mostrando.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Tbl_UPS_Datos_MostrandoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(Tbl_UPS_Datos_Mostrando);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 960, 220));
@@ -100,6 +117,26 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         // TODO add your handling code here:
         jScrollPane1.setVisible(true);
     }//GEN-LAST:event_Lbl_UPS_Datos_BuscarMouseClicked
+
+    private void Tbl_UPS_Datos_MostrandoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tbl_UPS_Datos_MostrandoMouseClicked
+        // TODO add your handling code here:
+        
+        //Recordar completar el codigo con el valor dentro de la fila a la cual se ace referencia
+        //la columna es 0 es decir no varia puesto que usaremos siempre la primera columna como referencia
+        FrmGestion_UPS_Datos_Detalle frm_ups_detalle = new FrmGestion_UPS_Datos_Detalle();
+        frm_ups_detalle.setVisible(true);
+        frm_ups_detalle.toFront();
+    }//GEN-LAST:event_Tbl_UPS_Datos_MostrandoMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        setExtendedState(FrmGestion_UPS_Datos.CROSSHAIR_CURSOR);
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments
