@@ -26,20 +26,23 @@ public class Personalize extends DefaultTableCellRenderer{
         //color verde
         if(table.getValueAt(row, 12).equals("CS") || table.getValueAt(row, 12).equals("CC"))
         {
-            Color verd = new Color(0,153,102);
+            //Color verd = new Color(0,153,102);
+            Color verd = new Color(68,182,73);
             
             setBackground(verd);
         }        
         //color rojo
         else if(table.getValueAt(row, 12).equals("AS") || table.getValueAt(row, 12).equals("PS")||table.getValueAt(row, 12).equals("PC")||table.getValueAt(row, 12).equals("AR"))
         {
-            Color ro = new Color(228,51,51);
+            //Color ro = new Color(228,51,51);
+            Color ro = new Color(233,94,106);
             setBackground(ro);
         }
         //en proceso amarillo
         else if(table.getValueAt(row, 12).equals("EP"))
         {
-            Color ye = new Color(255,204,102);
+            //Color ye = new Color(255,204,102);
+            Color ye = new Color(236,183,45);
             setBackground(ye);
         }
         
