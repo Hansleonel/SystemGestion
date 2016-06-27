@@ -8,6 +8,8 @@ package Presentacion;
 import Logica.L_UPSDatos;
 import static Presentacion.FrmGestion_UPS_Datos.UbicarPuntoUPS;
 import com.sun.awt.AWTUtilities;
+import java.awt.Desktop;
+import java.net.URI;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -83,22 +85,27 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         Lbl_UPS_Datos_Detalle_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 120, 30));
 
-        Lbl_UPS_Datos_Detalle_Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_Detalle_Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, 120, 30));
 
-        Lbl_UPS_Datos_Detalle_Ubicar_Direccion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_Detalle_Ubicar_Direccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Detalle_Ubicar_Direccion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_UPS_Datos_Detalle_Ubicar_DireccionMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicar_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, 120, 30));
 
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 70, 60));
 
-        Lbl_UPS_Datos_Detalle_Email.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_Detalle_Email.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
 
-        Lbl_UPS_Datos_Detalle_ActualizarD.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_Detalle_ActualizarD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_ActualizarD, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
 
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicacion_Photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 390, 320));
 
@@ -160,6 +167,19 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         // TODO add your handling code here:
         setExtendedState(FrmGestion_UPS_Datos_Detalle.CROSSHAIR_CURSOR);
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void Lbl_UPS_Datos_Detalle_Ubicar_DireccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_Detalle_Ubicar_DireccionMouseClicked
+        // TODO add your handling code here:
+        try {
+            if(Desktop.isDesktopSupported()){
+                Desktop desktop = Desktop.getDesktop();
+                if(desktop.isSupported(Desktop.Action.BROWSE)){
+                    desktop.browse(new URI("https://www.google.com.pe/maps/place/BBVA+Banco+Continental/@-12.0719335,-77.0382145,18z/data=!4m8!1m2!2m1!1sbbva!3m4!1s0x0:0x43eeb3f9488b7093!8m2!3d-12.071611!4d-77.0374209"));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_Lbl_UPS_Datos_Detalle_Ubicar_DireccionMouseClicked
 
     /**
      * @param args the command line arguments
