@@ -5,7 +5,11 @@
  */
 package Presentacion;
 
+import Logica.L_UPSDatos;
+import static Presentacion.FrmGestion_UPS_Datos.UbicarPuntoUPS;
 import com.sun.awt.AWTUtilities;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -21,6 +25,10 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         AWTUtilities.setWindowOpaque(this, false);
+        jScrollPane1.setVisible(false);
+        
+        String PuntoUbicar = UbicarPuntoUPS;
+        Mostrando_Datos_Ubicados(PuntoUbicar);
         
     }
 
@@ -51,6 +59,8 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         Txt_UPS_Datos_Detalle_MskSr = new javax.swing.JTextField();
         Txt_UPS_Datos_Detalle_MarcaModel = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tbl_UPS_Datos_Detalle_Mostrar = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -70,25 +80,25 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
-        Lbl_UPS_Datos_Detalle_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Detalle_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 120, 30));
 
-        Lbl_UPS_Datos_Detalle_Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Detalle_Eventos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, 120, 30));
 
-        Lbl_UPS_Datos_Detalle_Ubicar_Direccion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Detalle_Ubicar_Direccion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicar_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 420, 120, 30));
 
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 70, 60));
 
-        Lbl_UPS_Datos_Detalle_Email.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Detalle_Email.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
 
-        Lbl_UPS_Datos_Detalle_ActualizarD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Detalle_ActualizarD.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Detalle_ActualizarD, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
 
-        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
         getContentPane().add(Lbl_UPS_Datos_Detalle_Ubicacion_Photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 390, 320));
 
@@ -122,6 +132,21 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmUpsDetalle.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, -1));
+
+        Tbl_UPS_Datos_Detalle_Mostrar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(Tbl_UPS_Datos_Detalle_Mostrar);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, 80, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -179,6 +204,7 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Eventos;
     private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Ubicacion_Photo;
     private javax.swing.JLabel Lbl_UPS_Datos_Detalle_Ubicar_Direccion;
+    private javax.swing.JTable Tbl_UPS_Datos_Detalle_Mostrar;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_Buscar;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_Capacidad;
     private javax.swing.JTextField Txt_UPS_Datos_Detalle_Direccion;
@@ -191,5 +217,25 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+    private void Mostrando_Datos_Ubicados(String UbicarPunto) {
+        try {
+            DefaultTableModel model;
+            L_UPSDatos func = new L_UPSDatos();
+            model = func.MostrandoDatos(UbicarPunto);
+            Tbl_UPS_Datos_Detalle_Mostrar.setModel(model);
+            
+            Txt_UPS_Datos_Detalle_Buscar.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 0).toString());
+            Txt_UPS_Datos_Detalle_Direccion.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 2).toString());
+            Txt_UPS_Datos_Detalle_NroATM.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 4).toString());
+            Txt_UPS_Datos_Detalle_IP.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 12).toString());
+            Txt_UPS_Datos_Detalle_MskSr.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 13).toString());
+            Txt_UPS_Datos_Detalle_Capacidad.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 10).toString());
+            Txt_UPS_Datos_Detalle_MarcaModel.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 11).toString());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }
 }

@@ -117,7 +117,7 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public static String valorfila="";
+    
     private void Lbl_UPS_Datos_BuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_BuscarMouseClicked
         // TODO add your handling code here:
         jScrollPane1.setVisible(true);
@@ -133,12 +133,13 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Lbl_UPS_Datos_BuscarMouseClicked
 
-    public String UbicarPuntoUPS="";
+    public static String UbicarPuntoUPS="";
     private void Tbl_UPS_Datos_MostrandoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tbl_UPS_Datos_MostrandoMouseClicked
         // TODO add your handling code here:
         
         //Recordar completar el codigo con el valor dentro de la fila a la cual se ace referencia
         //la columna es 0 es decir no varia puesto que usaremos siempre la primera columna como referencia
+        
         String buscar;
         int fila = Tbl_UPS_Datos_Mostrando.rowAtPoint(evt.getPoint());
         buscar = Tbl_UPS_Datos_Mostrando.getValueAt(fila, 0).toString();
