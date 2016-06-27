@@ -71,7 +71,7 @@ public class L_OTEventos {
                 registr[17]=rs.getString("Hora_Programada");
                 registr[18]=rs.getString("Observaciones");
                 
-                totalregistr = totalregistr + 1;
+                //totalregistr = totalregistr + 1;
                 
                 model.addRow(registr);
                 
