@@ -224,7 +224,7 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         try {
             DefaultTableModel model;
             L_UPSDatos func = new L_UPSDatos();
-            model = func.MostrandoDatos(UbicarPunto);
+            model = func.MostrandoDatosUnicos(UbicarPunto);
             Tbl_UPS_Datos_Detalle_Mostrar.setModel(model);
             
             Txt_UPS_Datos_Detalle_Buscar.setText(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 0).toString());
