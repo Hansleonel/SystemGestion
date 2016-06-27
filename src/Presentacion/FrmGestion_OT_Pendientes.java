@@ -5,6 +5,8 @@
  */
 package Presentacion;
 
+import com.sun.awt.AWTUtilities;
+
 /**
  *
  * @author Hans
@@ -15,7 +17,11 @@ public class FrmGestion_OT_Pendientes extends javax.swing.JFrame {
      * Creates new form FrmGestion_OT_Pendientes
      */
     public FrmGestion_OT_Pendientes() {
+        this.setUndecorated(true);
         initComponents();
+        AWTUtilities.setWindowOpaque(this, false);
+        this.setLocationRelativeTo(null);
+        jScrollPane1.setVisible(false);
     }
 
     /**
@@ -27,12 +33,20 @@ public class FrmGestion_OT_Pendientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 10, 20));
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 80, 110, 30));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -92,7 +106,10 @@ public class FrmGestion_OT_Pendientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
