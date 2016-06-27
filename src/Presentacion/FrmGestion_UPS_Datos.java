@@ -66,19 +66,19 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
-        Lbl_UPS_Datos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_ConvToExel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 50, 50));
 
-        Lbl_UPS_Datos_Agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 50, 50));
 
-        Lbl_UPS_Datos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 50, 50));
 
-        Lbl_UPS_Datos_Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 50));
 
-        Lbl_UPS_Datos_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Lbl_UPS_Datos_Buscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_UPS_Datos_BuscarMouseClicked(evt);

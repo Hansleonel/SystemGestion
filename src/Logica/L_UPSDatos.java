@@ -96,7 +96,7 @@ public class L_UPSDatos {
         totalregitrs=0;        
         model = new DefaultTableModel(null,titulos);
         
-        sSql = "SELECT * FROM upsinformacion_prb WHERE idInformacion_UPS";
+        sSql = "SELECT * FROM upsinformacion_prb WHERE idInformacion_UPS ='"+UbicarPunto+"'";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSql);
