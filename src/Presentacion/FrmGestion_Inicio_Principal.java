@@ -89,7 +89,10 @@ public class FrmGestion_Inicio_Principal extends javax.swing.JFrame {
 
     private void Lbl_Inicio_Principal_UPS_EventosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Inicio_Principal_UPS_EventosMouseClicked
         // TODO add your handling code here:
-        
+        FrmGestion_OT_Eventos form_ot_eventos = new FrmGestion_OT_Eventos();
+        form_ot_eventos.setVisible(true);
+        form_ot_eventos.toFront();
+        dispose();
     }//GEN-LAST:event_Lbl_Inicio_Principal_UPS_EventosMouseClicked
 
     private void Lbl_Inicio_Principal_DisposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Inicio_Principal_DisposMouseClicked
