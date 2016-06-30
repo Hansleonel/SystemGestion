@@ -51,8 +51,11 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, 120, 30));
 
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -70,6 +73,7 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 40, 120, 30));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 40, 120, 30));
 
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -105,17 +109,7 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
-        jScrollPane1.setVisible(true);
-        try {
-            DefaultTableModel model;
-            L_OTEventos func = new L_OTEventos();
-            model=func.MostrandoEventos(jTextField1.getText());
-            
-            jTable1.setModel(model);
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e);
-        }
+        Buscar_Eventos(jTextField1.getText());       
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -178,4 +172,19 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+
+    private void Buscar_Eventos(String buscar) {
+        jScrollPane1.setVisible(true);
+        try {
+            DefaultTableModel model;
+            L_OTEventos func = new L_OTEventos();
+            model=func.MostrandoEventos(jTextField1.getText());
+            
+            jTable1.setModel(model);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }
 }
