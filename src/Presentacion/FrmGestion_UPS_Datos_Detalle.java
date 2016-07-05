@@ -190,7 +190,8 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         // TODO add your handling code here:
         FrmGestion_OT_Eventos form_OT_Eventos_from_UPS_Detalles = new FrmGestion_OT_Eventos();
         form_OT_Eventos_from_UPS_Detalles.setVisible(true);
-        form_OT_Eventos_from_UPS_Detalles.toFront();        
+        form_OT_Eventos_from_UPS_Detalles.toFront();
+        form_OT_Eventos_from_UPS_Detalles.Buscar_Eventos(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 1).toString());
         
     }//GEN-LAST:event_Lbl_UPS_Datos_Detalle_EventosMouseClicked
 
