@@ -133,5 +133,20 @@ public class L_OTEventos {
             return null;
         }
     }
+
+    public String Buscar_OT_Mayor() {
+        sSql="SELECT MAX(Nro_OT) FROM otinformacion_prb";
+        String OT_Mayor;
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sSql);
+            rs.next();
+            OT_Mayor=rs.getString("MAX(Nro_OT)");
+            return OT_Mayor;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            return null;
+        }
+    }
     
 }

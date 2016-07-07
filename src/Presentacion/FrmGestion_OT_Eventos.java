@@ -53,9 +53,22 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Lbl_OT_Eventos_Agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Eventos_Agregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Eventos_AgregarMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_OT_Eventos_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 60, 60));
+
+        Lbl_OT_Eventos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_OT_Eventos_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
+
+        Lbl_OT_Eventos_Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_OT_Eventos_Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
+
+        Lbl_OT_Eventos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_OT_Eventos_ConvToExel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
 
         Lbl_OT_Eventos_Busqueda_Detallada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -139,6 +152,13 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         // TODO add your handling code here:
         setExtendedState(FrmGestion_OT_Eventos.CROSSHAIR_CURSOR);
     }//GEN-LAST:event_Lbl_OT_Eventos_MinMouseClicked
+
+    private void Lbl_OT_Eventos_AgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Eventos_AgregarMouseClicked
+        // TODO add your handling code here:
+        FrmGestion_OT_Crear form = new FrmGestion_OT_Crear();
+        form.setVisible(true);
+        form.toFront();
+    }//GEN-LAST:event_Lbl_OT_Eventos_AgregarMouseClicked
 
     /**
      * @param args the command line arguments
