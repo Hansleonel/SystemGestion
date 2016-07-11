@@ -201,6 +201,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     private void Tbl_OT_Crear_UPS_DatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tbl_OT_Crear_UPS_DatosMouseClicked
         // TODO add your handling code here:
         int fila = Tbl_OT_Crear_UPS_Datos.rowAtPoint(evt.getPoint());
+        
                 
     }//GEN-LAST:event_Tbl_OT_Crear_UPS_DatosMouseClicked
 
