@@ -8,6 +8,10 @@ package Presentacion;
 import Logica.L_OTEventos;
 import Logica.L_UPSDatos;
 import com.sun.awt.AWTUtilities;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -27,7 +31,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         jScrollPane1.setVisible(false);
         
-        Buscar_Nuevo_Nro_OT();
+        Buscar_Nuevo_Nro_OT();        
     }
 
     /**
@@ -39,11 +43,13 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Lbl_OT_Crear_Aceptar_OT = new javax.swing.JLabel();
+        Lbl_OT_Crear_Enviar_Mail = new javax.swing.JLabel();
+        Lbl_OT_Crear_Actualizar_OT = new javax.swing.JLabel();
+        Lbl_OT_Crear_Buscar_UPS = new javax.swing.JLabel();
         Txt_OT_Crear_Tecnic = new javax.swing.JTextField();
         Txt_OT_Crear_Fecha_Reprogram = new javax.swing.JTextField();
         Txt_OT_Crear_Buscar_UPS = new javax.swing.JTextField();
@@ -68,25 +74,44 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
+
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 120, 30));
 
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 60, 60));
-
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 60, 60));
-
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 60, 60));
-
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Lbl_OT_Crear_Aceptar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Aceptar_OT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                Lbl_OT_Crear_Aceptar_OTMouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 110, 120, 30));
+        getContentPane().add(Lbl_OT_Crear_Aceptar_OT, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 60, 60));
+
+        Lbl_OT_Crear_Enviar_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(Lbl_OT_Crear_Enviar_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 60, 60));
+
+        Lbl_OT_Crear_Actualizar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(Lbl_OT_Crear_Actualizar_OT, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 60, 60));
+
+        Lbl_OT_Crear_Buscar_UPS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Buscar_UPS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Crear_Buscar_UPSMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Lbl_OT_Crear_Buscar_UPS, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 110, 120, 30));
 
         Txt_OT_Crear_Tecnic.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Txt_OT_Crear_Tecnic.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -183,7 +208,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void Lbl_OT_Crear_Buscar_UPSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Buscar_UPSMouseClicked
         // TODO add your handling code here:
         jScrollPane1.setVisible(true);
         try {
@@ -196,14 +221,48 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_Lbl_OT_Crear_Buscar_UPSMouseClicked
 
     private void Tbl_OT_Crear_UPS_DatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Tbl_OT_Crear_UPS_DatosMouseClicked
         // TODO add your handling code here:
-        int fila = Tbl_OT_Crear_UPS_Datos.rowAtPoint(evt.getPoint());
+        int fila = Tbl_OT_Crear_UPS_Datos.rowAtPoint(evt.getPoint());        
+        Txt_OT_Crear_NomLocal.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 1).toString());
+        Txt_OT_Crear_Direccion.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 2).toString());
         
-                
+        Date Fecha = new Date();
+        SimpleDateFormat formatoDate = new SimpleDateFormat("dd/MM/YYYY");        
+        Txt_OT_Crear_FechaReporte.setText(formatoDate.format(Fecha));
+        
+        Calendar Hora_Minuto = new GregorianCalendar();
+        int Hora = Hora_Minuto.get(Calendar.HOUR_OF_DAY);
+        int Minuto = Hora_Minuto.get(Calendar.MINUTE);
+        Txt_OT_Crear_HoraReporte.setText(Hora+":"+Minuto);
+        
+        Txt_OT_Crear_TipoLocal.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 5).toString());
+        if(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 5).equals("ATM")){
+            Txt_OT_Crear_NroAtm_CC.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 4).toString());
+        }
+        else if (Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 5).equals("OFICINA")){
+            Txt_OT_Crear_NroAtm_CC.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 3).toString());
+        }
+        
+        //Completar el codigo para la eleccion de la fechaprogramada
+        //Completar el codigo para la eleccion de la fechareprogramac
     }//GEN-LAST:event_Tbl_OT_Crear_UPS_DatosMouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        setExtendedState(FrmGestion_OT_Crear.CROSSHAIR_CURSOR);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void Lbl_OT_Crear_Aceptar_OTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
 
     /**
      * @param args the command line arguments
@@ -241,6 +300,10 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Lbl_OT_Crear_Aceptar_OT;
+    private javax.swing.JLabel Lbl_OT_Crear_Actualizar_OT;
+    private javax.swing.JLabel Lbl_OT_Crear_Buscar_UPS;
+    private javax.swing.JLabel Lbl_OT_Crear_Enviar_Mail;
     private javax.swing.JTable Tbl_OT_Crear_UPS_Datos;
     private javax.swing.JTextField Txt_OT_Crear_Buscar_UPS;
     private javax.swing.JTextField Txt_OT_Crear_DetalleSolicitud;
@@ -259,10 +322,8 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     private javax.swing.JTextField Txt_OT_Crear_TipoLocal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
