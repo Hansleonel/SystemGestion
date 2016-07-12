@@ -93,6 +93,16 @@ public class FrmGestion_Login extends javax.swing.JFrame {
         getContentPane().add(FrmGestion_Login_Close, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 60, 30));
 
         FrmGestion_Login_Panel_01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/Login.png"))); // NOI18N
+        FrmGestion_Login_Panel_01.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                FrmGestion_Login_Panel_01MouseDragged(evt);
+            }
+        });
+        FrmGestion_Login_Panel_01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                FrmGestion_Login_Panel_01MousePressed(evt);
+            }
+        });
         getContentPane().add(FrmGestion_Login_Panel_01, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
 
         Tbl_Login_Ingresar.setModel(new javax.swing.table.DefaultTableModel(
@@ -148,6 +158,21 @@ public class FrmGestion_Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         setExtendedState(FrmGestion_Login.CROSSHAIR_CURSOR);
     }//GEN-LAST:event_FrmGestion_Login_MinMouseClicked
+
+    int posx;
+    int posy;
+    private void FrmGestion_Login_Panel_01MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FrmGestion_Login_Panel_01MousePressed
+        // TODO add your handling code here:
+        posx=evt.getX();
+        posy=evt.getY();
+    }//GEN-LAST:event_FrmGestion_Login_Panel_01MousePressed
+
+    private void FrmGestion_Login_Panel_01MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FrmGestion_Login_Panel_01MouseDragged
+        // TODO add your handling code here:
+        int xposicion = evt.getXOnScreen()-posx;
+        int yposicion = evt.getYOnScreen()-posy;
+        this.setLocation(xposicion,yposicion);
+    }//GEN-LAST:event_FrmGestion_Login_Panel_01MouseDragged
 
     /**
      * @param args the command line arguments

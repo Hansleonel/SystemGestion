@@ -74,6 +74,16 @@ public class FrmGestion_Inicio_Principal extends javax.swing.JFrame {
         getContentPane().add(Lbl_Inicio_Principal_Min, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 30));
 
         Lbl_Inicio_Principal_Panel_01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmPrincipal.png"))); // NOI18N
+        Lbl_Inicio_Principal_Panel_01.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                Lbl_Inicio_Principal_Panel_01MouseDragged(evt);
+            }
+        });
+        Lbl_Inicio_Principal_Panel_01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                Lbl_Inicio_Principal_Panel_01MousePressed(evt);
+            }
+        });
         getContentPane().add(Lbl_Inicio_Principal_Panel_01, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -104,6 +114,21 @@ public class FrmGestion_Inicio_Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         setExtendedState(FrmGestion_Inicio_Principal.CROSSHAIR_CURSOR);        
     }//GEN-LAST:event_Lbl_Inicio_Principal_MinMouseClicked
+
+    int posx;
+    int posy;
+    private void Lbl_Inicio_Principal_Panel_01MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Inicio_Principal_Panel_01MousePressed
+        // TODO add your handling code here:
+        posx = evt.getX();
+        posy = evt.getY();
+    }//GEN-LAST:event_Lbl_Inicio_Principal_Panel_01MousePressed
+
+    private void Lbl_Inicio_Principal_Panel_01MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_Inicio_Principal_Panel_01MouseDragged
+        // TODO add your handling code here:
+        int xposicion = evt.getXOnScreen()-posx;
+        int yposicion = evt.getYOnScreen()-posy;
+        this.setLocation(xposicion,yposicion);
+    }//GEN-LAST:event_Lbl_Inicio_Principal_Panel_01MouseDragged
 
     /**
      * @param args the command line arguments
