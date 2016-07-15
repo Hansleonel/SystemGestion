@@ -45,6 +45,8 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -75,6 +77,15 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 120, 30));
+
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 120, 30));
 
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -91,6 +102,11 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 120, 30));
 
         Lbl_OT_Crear_Aceptar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -266,6 +282,17 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
 
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:        
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        FrmGestion_OT_Crear_Proveedor form_ot_crear_proveedor = new FrmGestion_OT_Crear_Proveedor();
+        form_ot_crear_proveedor.setVisible(true);
+        form_ot_crear_proveedor.toFront();
+    }//GEN-LAST:event_jLabel4MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -310,7 +337,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     private javax.swing.JTextField Txt_OT_Crear_Buscar_UPS;
     private javax.swing.JTextField Txt_OT_Crear_DetalleSolicitud;
     private javax.swing.JTextField Txt_OT_Crear_Direccion;
-    private javax.swing.JTextField Txt_OT_Crear_EstadoServicio;
+    public static javax.swing.JTextField Txt_OT_Crear_EstadoServicio;
     private javax.swing.JTextField Txt_OT_Crear_FechaReporte;
     private javax.swing.JTextField Txt_OT_Crear_Fecha_Program;
     private javax.swing.JTextField Txt_OT_Crear_Fecha_Reprogram;
@@ -319,11 +346,13 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     private javax.swing.JTextField Txt_OT_Crear_NomLocal;
     private javax.swing.JTextField Txt_OT_Crear_NroAtm_CC;
     private javax.swing.JTextField Txt_OT_Crear_Nro_OT;
-    private javax.swing.JTextField Txt_OT_Crear_Proveedor;
+    public static javax.swing.JTextField Txt_OT_Crear_Proveedor;
     private javax.swing.JTextField Txt_OT_Crear_Tecnic;
     private javax.swing.JTextField Txt_OT_Crear_TipoLocal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
