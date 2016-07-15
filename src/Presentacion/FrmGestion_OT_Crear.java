@@ -8,6 +8,7 @@ package Presentacion;
 import Logica.L_OTEventos;
 import Logica.L_UPSDatos;
 import com.sun.awt.AWTUtilities;
+import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -31,7 +32,8 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         jScrollPane1.setVisible(false);
         
-        Buscar_Nuevo_Nro_OT();        
+        Buscar_Nuevo_Nro_OT();
+        jLabel2.setEnabled(false);
     }
 
     /**
@@ -151,7 +153,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
 
         Txt_OT_Crear_DetalleSolicitud.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Txt_OT_Crear_DetalleSolicitud.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(Txt_OT_Crear_DetalleSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 260, -1));
+        getContentPane().add(Txt_OT_Crear_DetalleSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 110, -1));
 
         Txt_OT_Crear_EstadoServicio.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Txt_OT_Crear_EstadoServicio.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
