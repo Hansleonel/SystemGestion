@@ -78,6 +78,11 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 120, 30));
 
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -297,6 +302,13 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         form_ot_crear_proveedor.toFront();
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        FrmGestion_OT_Crear_Detalle_Servicio form_ot_crear_detalle_servicio = new FrmGestion_OT_Crear_Detalle_Servicio();
+        form_ot_crear_detalle_servicio.setVisible(true);
+        form_ot_crear_detalle_servicio.toFront();
+    }//GEN-LAST:event_jLabel3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -339,7 +351,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_OT_Crear_Enviar_Mail;
     private javax.swing.JTable Tbl_OT_Crear_UPS_Datos;
     private javax.swing.JTextField Txt_OT_Crear_Buscar_UPS;
-    private javax.swing.JTextField Txt_OT_Crear_DetalleSolicitud;
+    public static javax.swing.JTextField Txt_OT_Crear_DetalleSolicitud;
     private javax.swing.JTextField Txt_OT_Crear_Direccion;
     public static javax.swing.JTextField Txt_OT_Crear_EstadoServicio;
     private javax.swing.JTextField Txt_OT_Crear_FechaReporte;
