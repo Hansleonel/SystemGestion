@@ -32,8 +32,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         jScrollPane1.setVisible(false);
         
-        Buscar_Nuevo_Nro_OT();
-        jLabel2.setEnabled(false);
+        Buscar_Nuevo_Nro_OT();        
     }
 
     /**
@@ -77,6 +76,8 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 120, 30));
 
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -283,7 +284,10 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     }//GEN-LAST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        // TODO add your handling code here:        
+        // TODO add your handling code here:
+        FrmGestion_OT_Crear_Estado_Servicio form_ot_crear_estado_servicio = new FrmGestion_OT_Crear_Estado_Servicio();
+        form_ot_crear_estado_servicio.setVisible(true);
+        form_ot_crear_estado_servicio.toFront();
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
