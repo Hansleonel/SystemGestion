@@ -5,6 +5,7 @@
  */
 package Presentacion;
 
+import Datos.D_OTEventos;
 import Logica.L_OTEventos;
 import Logica.L_UPSDatos;
 import com.sun.awt.AWTUtilities;
@@ -24,7 +25,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmGestion_OT_Crear
-     */
+     */    
     public FrmGestion_OT_Crear() {
         this.setUndecorated(true);
         initComponents();
@@ -272,6 +273,13 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         
         //Completar el codigo para la eleccion de la fechaprogramada
         //Completar el codigo para la eleccion de la fechareprogramac
+        Txt_OT_Crear_Fecha_Program.setText("dd/MM/YYYY");
+        Txt_OT_Crear_Hora_Program.setText("Ingrese Hora");
+        
+        //la siguientes lineas se peude borrar 
+        //solo son usadas para no permitir el null en ningun caso
+        Txt_OT_Crear_Tecnic.setText(" ");
+        Txt_OT_Crear_Fecha_Reprogram.setText(" ");        
     }//GEN-LAST:event_Tbl_OT_Crear_UPS_DatosMouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -284,8 +292,26 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         setExtendedState(FrmGestion_OT_Crear.CROSSHAIR_CURSOR);
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    public static String TipoSolicitud="";
     private void Lbl_OT_Crear_Aceptar_OTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
         // TODO add your handling code here:
+        D_OTEventos dts = new D_OTEventos();
+        L_OTEventos func = new L_OTEventos();
+        
+        int fila = Tbl_OT_Crear_UPS_Datos.rowAtPoint(evt.getPoint());
+        dts.setIdItem(Integer.parseInt(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 0).toString()));
+        dts.setFechaReporte(Txt_OT_Crear_FechaReporte.getText());
+        dts.setHoraReporte(Txt_OT_Crear_HoraReporte.getText());
+        dts.setC_Costo_Nro_ATM(Txt_OT_Crear_NroAtm_CC.getText());
+        dts.setTipoLocal(Txt_OT_Crear_TipoLocal.getText());        
+        dts.setNomLocal(Txt_OT_Crear_NomLocal.getText());
+        dts.setZonaLocal(" ");
+        dts.setTipoSolicitud(TipoSolicitud);
+        dts.setDetalleSolicitud(Txt_OT_Crear_DetalleSolicitud.getText());
+        dts.setNro_OT(Integer.parseInt(Txt_OT_Crear_Nro_OT.getText()));
+        dts.setLvl_servic(" ");
+        dts.setEstado_servic(Txt_OT_Crear_EstadoServicio.getText());
+        dts.setProveedor_Item(Txt_OT_Crear_Proveedor.getText());
     }//GEN-LAST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked

@@ -33,6 +33,8 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -53,6 +55,8 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 10, 20));
 
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -151,15 +155,35 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 60, 40));
 
         jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 60, 40));
 
         jLabel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 60, 40));
 
         jLabel16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 60, 40));
 
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 60, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmOTCrearDetalleServicio.png"))); // NOI18N
@@ -176,11 +200,13 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         OTDetalle="AM ";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
         OTDetalle="AI ";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
@@ -193,11 +219,13 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
         OTDetalle="IT ";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
         OTDetalle="RI ";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
@@ -235,6 +263,34 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
+        // TODO add your handling code here:
+        OTDetalle=OTDetalle+"5";
+        FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
+        dispose();
+    }//GEN-LAST:event_jLabel14MouseClicked
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+        // TODO add your handling code here:
+        OTDetalle=OTDetalle+"6";
+        FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
+        dispose();
+    }//GEN-LAST:event_jLabel15MouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        // TODO add your handling code here:
+        OTDetalle=OTDetalle+"7";
+        FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
+        dispose();
+    }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+        // TODO add your handling code here:
+        OTDetalle=OTDetalle+"8";
+        FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
+        dispose();
+    }//GEN-LAST:event_jLabel17MouseClicked
 
     /**
      * @param args the command line arguments
@@ -281,6 +337,8 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
