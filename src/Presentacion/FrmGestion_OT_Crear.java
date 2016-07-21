@@ -125,9 +125,19 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         getContentPane().add(Lbl_OT_Crear_Aceptar_OT, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 60, 60));
 
         Lbl_OT_Crear_Enviar_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Enviar_Mail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Crear_Enviar_MailMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_OT_Crear_Enviar_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 60, 60));
 
         Lbl_OT_Crear_Actualizar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Actualizar_OT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Crear_Actualizar_OTMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_OT_Crear_Actualizar_OT, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 60, 60));
 
         Lbl_OT_Crear_Buscar_UPS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -321,11 +331,12 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         dts.setHora_Programada(Txt_OT_Crear_Hora_Program.getText());
         dts.setObservaciones(jTextArea1.getText());
         
-        try {
-            func.Insertar_OTEventos(dts);
+        try {  
+            
             if(func.Insertar_OTEventos(dts)){
-                JOptionPane.showMessageDialog(rootPane,"OT Creada Existosamente");
-            }
+                JOptionPane.showMessageDialog(rootPane,"OT Creada Existosamente");                
+            }            
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
@@ -351,6 +362,27 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         form_ot_crear_detalle_servicio.setVisible(true);
         form_ot_crear_detalle_servicio.toFront();
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void Lbl_OT_Crear_Enviar_MailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Enviar_MailMouseClicked
+        // TODO add your handling code here:
+        FrmGestion_OT_Crear_Mail form_ot_crear_mail = new FrmGestion_OT_Crear_Mail();
+        form_ot_crear_mail.setVisible(true);
+        form_ot_crear_mail.toFront();
+    }//GEN-LAST:event_Lbl_OT_Crear_Enviar_MailMouseClicked
+
+    private void Lbl_OT_Crear_Actualizar_OTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Actualizar_OTMouseClicked
+        // TODO add your handling code here:
+        try {
+            DefaultTableModel model;
+            L_OTEventos func = new L_OTEventos();
+            model = func.MostrandoEventos("");
+            Tbl_OT_Crear_UPS_Datos.setModel(model);
+            Ocultar_Columnas_OT();                        
+            //Buscar_Nuevo_Nro_OT();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_Lbl_OT_Crear_Actualizar_OTMouseClicked
 
     /**
      * @param args the command line arguments
@@ -493,5 +525,41 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         int Nro_OT_Actualizado = Integer.parseInt(Nro_OT_Actual)+1;
         Txt_OT_Crear_Nro_OT.setText(Integer.toString(Nro_OT_Actualizado));
         
+    }
+
+    private void Ocultar_Columnas_OT() {
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(0).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(0).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(0).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(3).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(3).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(3).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(4).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(4).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(4).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(5).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(5).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(5).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(7).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(7).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(7).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(8).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(8).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(8).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(11).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(11).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(11).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(14).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(14).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(14).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(14).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(14).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(14).setPreferredWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setMaxWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setMinWidth(0);
+        Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setPreferredWidth(0);
     }
 }
