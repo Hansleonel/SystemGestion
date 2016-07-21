@@ -561,5 +561,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setMaxWidth(0);
         Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setMinWidth(0);
         Tbl_OT_Crear_UPS_Datos.getColumnModel().getColumn(15).setPreferredWidth(0);
+        //completar para la mejor visualizacion de datos
+        //tener una medida de cada columna mas adecuada para mejorar la actualizcn
     }
 }

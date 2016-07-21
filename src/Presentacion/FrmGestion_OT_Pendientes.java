@@ -99,6 +99,16 @@ public class FrmGestion_OT_Pendientes extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 880, 210));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmUpsPendiente.png"))); // NOI18N
+        jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel1MouseDragged(evt);
+            }
+        });
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel1MousePressed(evt);
+            }
+        });
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -108,6 +118,21 @@ public class FrmGestion_OT_Pendientes extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    int posx;
+    int posy;
+    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
+        // TODO add your handling code here:
+        posx = evt.getX();
+        posy = evt.getY();
+    }//GEN-LAST:event_jLabel1MousePressed
+
+    private void jLabel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseDragged
+        // TODO add your handling code here:
+        int xposicion = evt.getXOnScreen()-posx;
+        int yposicion = evt.getYOnScreen()-posy;
+        this.setLocation(xposicion,yposicion);
+    }//GEN-LAST:event_jLabel1MouseDragged
 
     private void buscar_eventos_pendientes(String buscar){
         try {
