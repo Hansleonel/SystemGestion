@@ -279,7 +279,8 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         //la siguientes lineas se peude borrar 
         //solo son usadas para no permitir el null en ningun caso
         Txt_OT_Crear_Tecnic.setText(" ");
-        Txt_OT_Crear_Fecha_Reprogram.setText(" ");        
+        Txt_OT_Crear_Fecha_Reprogram.setText(" ");
+        jTextArea1.setText(" ");
     }//GEN-LAST:event_Tbl_OT_Crear_UPS_DatosMouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -312,6 +313,13 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         dts.setLvl_servic(" ");
         dts.setEstado_servic(Txt_OT_Crear_EstadoServicio.getText());
         dts.setProveedor_Item(Txt_OT_Crear_Proveedor.getText());
+        //completar esta informacion o reemplazarla
+        //con el proveedor de la reprogramacn
+        dts.setReprog_Servic(Txt_OT_Crear_Proveedor.getText());
+        dts.setTecnic(Txt_OT_Crear_Tecnic.getText());
+        dts.setFecha_Programada(Txt_OT_Crear_Fecha_Program.getText());
+        dts.setHora_Programada(Txt_OT_Crear_Hora_Program.getText());
+        dts.setObservaciones(jTextArea1.getText());
     }//GEN-LAST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
