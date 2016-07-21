@@ -320,6 +320,15 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         dts.setFecha_Programada(Txt_OT_Crear_Fecha_Program.getText());
         dts.setHora_Programada(Txt_OT_Crear_Hora_Program.getText());
         dts.setObservaciones(jTextArea1.getText());
+        
+        try {
+            func.Insertar_OTEventos(dts);
+            if(func.Insertar_OTEventos(dts)){
+                JOptionPane.showMessageDialog(rootPane,"OT Creada Existosamente");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
     }//GEN-LAST:event_Lbl_OT_Crear_Aceptar_OTMouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked

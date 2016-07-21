@@ -199,95 +199,98 @@ public class FrmGestion_OT_Crear_Detalle_Servicio extends javax.swing.JFrame {
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
-        OTDetalle="AM ";
+        OTDetalle="AM";
         FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
-        OTDetalle="AI ";
+        OTDetalle="AI";
         FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"1";
+        OTDetalle=OTDetalle+" 1";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
-        OTDetalle="IT ";
+        OTDetalle="IT";
         FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-        OTDetalle="RI ";
+        OTDetalle="RI";
         FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
-        OTDetalle="RRC ";
+        OTDetalle="RRC";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-        OTDetalle="MT ";
+        OTDetalle="MT";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        OTDetalle="RV ";
+        OTDetalle="RV";
+        FrmGestion_OT_Crear.TipoSolicitud=OTDetalle;
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"2";
+        OTDetalle=OTDetalle+" 2";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"4";
+        OTDetalle=OTDetalle+" 4";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"3";
+        OTDetalle=OTDetalle+" 3";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"5";
+        OTDetalle=OTDetalle+" 5";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"6";
+        OTDetalle=OTDetalle+" 6";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel15MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"7";
+        OTDetalle=OTDetalle+" 7";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
         // TODO add your handling code here:
-        OTDetalle=OTDetalle+"8";
+        OTDetalle=OTDetalle+" 8";
         FrmGestion_OT_Crear.Txt_OT_Crear_DetalleSolicitud.setText(OTDetalle);
         dispose();
     }//GEN-LAST:event_jLabel17MouseClicked

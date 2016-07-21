@@ -5,7 +5,9 @@
  */
 package Logica;
 
+import Datos.D_OTEventos;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
@@ -146,6 +148,54 @@ public class L_OTEventos {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
             return null;
+        }
+    }
+
+    public boolean Insertar_OTEventos(D_OTEventos dts) {
+        sSql="SELECT MAX(idOrdenDeT) FROM otinformacion_prb";
+        sSql2="INSERT INTO otinformacion_prb(idOrdenDeT,idItem,FechaReporte,HoraReporte,C_Costo_Nro_ATM,TipoLocal,NomLocal,ZonaLocal,TipoSolicitud,DetalleSolicitud,Nro_OT,Lvl_Servic,Estado_Servic,Proveedor_Item,Reprogr_Servic,Tecnic,Fecha_Programada,Hora_Programada,Observaciones)"+
+                "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String IdOrdenTMayor;
+        
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sSql);            
+            rs.next();
+            
+            IdOrdenTMayor = rs.getString("MAX(idOrdenDeT)");            
+            int IDMayor = Integer.parseInt(IdOrdenTMayor)+1;
+            
+            PreparedStatement pst = cn.prepareStatement(sSql2);
+            pst.setInt(1, IDMayor);
+            pst.setInt(2, dts.getIdItem());
+            pst.setString(3, dts.getFechaReporte());
+            pst.setString(4, dts.getHoraReporte());
+            pst.setString(5, dts.getC_Costo_Nro_ATM());
+            pst.setString(6, dts.getTipoLocal());
+            pst.setString(7, dts.getNomLocal());
+            pst.setString(8, dts.getZonaLocal());
+            pst.setString(9, dts.getTipoSolicitud());
+            pst.setString(10, dts.getDetalleSolicitud());
+            pst.setInt(11, dts.getNro_OT());
+            pst.setString(12, dts.getLvl_servic());
+            pst.setString(13, dts.getEstado_servic());
+            pst.setString(14, dts.getProveedor_Item());
+            pst.setString(15, dts.getReprog_Servic());
+            pst.setString(16, dts.getTecnic());
+            pst.setString(17, dts.getFecha_Programada());
+            pst.setString(18, dts.getHora_Programada());
+            pst.setString(19, dts.getObservaciones());
+            
+            int n = pst.executeUpdate();
+            if(n!=0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            return false;
         }
     }
     
