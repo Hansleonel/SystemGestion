@@ -74,6 +74,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Tbl_OT_Crear_UPS_Datos = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -240,6 +241,9 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmOTCrear.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -263,7 +267,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         int fila = Tbl_OT_Crear_UPS_Datos.rowAtPoint(evt.getPoint());        
         Txt_OT_Crear_NomLocal.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 1).toString());
         Txt_OT_Crear_Direccion.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 2).toString());
-        
+        jTextField1.setText(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 0).toString());
         Date Fecha = new Date();
         SimpleDateFormat formatoDate = new SimpleDateFormat("dd/MM/YYYY");        
         Txt_OT_Crear_FechaReporte.setText(formatoDate.format(Fecha));
@@ -310,7 +314,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         L_OTEventos func = new L_OTEventos();
         
         int fila = Tbl_OT_Crear_UPS_Datos.rowAtPoint(evt.getPoint());
-        dts.setIdItem(Integer.parseInt(Tbl_OT_Crear_UPS_Datos.getValueAt(fila, 0).toString()));
+        dts.setIdItem(Integer.parseInt(jTextField1.getText()));        
         dts.setFechaReporte(Txt_OT_Crear_FechaReporte.getText());
         dts.setHoraReporte(Txt_OT_Crear_HoraReporte.getText());
         dts.setC_Costo_Nro_ATM(Txt_OT_Crear_NroAtm_CC.getText());
@@ -449,6 +453,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private void Ocultar_Columnas_UPS() {
