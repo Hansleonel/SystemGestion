@@ -6,6 +6,7 @@
 package Presentacion;
 
 import Logica.L_OTEventos;
+import Logica.L_POIExcel;
 import com.sun.awt.AWTUtilities;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -69,6 +70,11 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         getContentPane().add(Lbl_OT_Eventos_Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
 
         Lbl_OT_Eventos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Eventos_ConvToExel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Eventos_ConvToExelMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_OT_Eventos_ConvToExel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
 
         Lbl_OT_Eventos_Busqueda_Detallada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -159,6 +165,17 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         form.setVisible(true);
         form.toFront();
     }//GEN-LAST:event_Lbl_OT_Eventos_AgregarMouseClicked
+
+    private void Lbl_OT_Eventos_ConvToExelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Eventos_ConvToExelMouseClicked
+        // TODO add your handling code here:
+        L_POIExcel Conv_Tbl_Excel = new L_POIExcel();
+        try {
+            //EL METODO EXPORTAR DEBE DE TENER EL THROW EXCEPTION
+            //RECUERDA AGREGARLO AL METODO NECESARIAMENTE
+            Conv_Tbl_Excel.Exportar(Tbl_OT_Eventos_Mostrando);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_Lbl_OT_Eventos_ConvToExelMouseClicked
 
     /**
      * @param args the command line arguments
