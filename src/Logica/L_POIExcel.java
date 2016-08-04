@@ -78,7 +78,9 @@ public class L_POIExcel {
                 //celda = fila.getCell(6);
                 //celda.setCellValue(9);
                 for(int i = -1; i < numfila; i++){
-                    fila = hoja.getRow(i+1);
+                    //esta linea posiciona donde se empezara a escribir en este caso en la fila 4
+                    //recuerda que tanto fila como columna inician su conteo con 0
+                    fila = hoja.getRow(i+5);
                     for(int j = 0; j < numcolumn; j++){
                         celda = fila.getCell(j);
                         if(i == -1){
@@ -88,12 +90,12 @@ public class L_POIExcel {
                             celda.setCellValue(String.valueOf(Tbl_OT_Eventos_MostrandoExportar.getValueAt(i, j)));
                         }
                     }
-                }
+                }                
             } catch (NullPointerException NPE) {
                 //EN CSAO LAS CELDAS ESTE VACIAS
                 //ESCRIBIMOS UN VALOR SOBRE ELLAS
                 for(int i = -1; i < numfila; i++){
-                    Row filaV = hoja.createRow(i+1);
+                    Row filaV = hoja.createRow(i+5);
                     for(int j = 0; j < numcolumn; j++){
                         Cell celdaV= filaV.createCell(j);
                         if(i == -1){
