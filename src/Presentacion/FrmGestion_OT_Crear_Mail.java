@@ -5,7 +5,10 @@
  */
 package Presentacion;
 
+import Datos.D_Mail;
+import Logica.L_Mail;
 import com.sun.awt.AWTUtilities;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -56,6 +59,12 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
+
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 120, 30));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 120, 30));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 120, 30));
@@ -95,6 +104,11 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        Enviar_OT_Mail();
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -146,4 +160,24 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
+
+    private void Enviar_OT_Mail() {
+        D_Mail dts = new D_Mail();
+        L_Mail func = new L_Mail();
+        
+        dts.setUser("monitoreosistelec@outlook.com");
+        dts.setPassword("Mhne12/Dic,4");
+        dts.setArchiveDir(jTextField4.getText());
+        dts.setArchiveName(" ");
+        dts.setDestine(jTextField2.getText().trim());
+        dts.setAsunto(jTextField1.getText());
+        dts.setMensaje(jTextArea1.getText());
+        
+        if(func.send_mail(dts)){
+            JOptionPane.showMessageDialog(rootPane, "Se envio el Mail");
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Confirmar datos, 404 no enviado");
+        }
+    }
 }
