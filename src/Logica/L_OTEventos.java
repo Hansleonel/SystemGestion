@@ -198,5 +198,45 @@ public class L_OTEventos {
             return false;
         }
     }
+
+    public boolean editar(D_OTEventos dts) {
+        sSql = "UPDATE otinformacion_prb SET idItem=?, FechaReporte=?, HoraReporte=?, C_Costo_Nro_ATM=?, TipoLocal=?, NomLocal=?, ZonaLocal=?, TipoSolicitud=?, DetalleSolicitud=?, Nro_OT=?, Lvl_Servic=?, Estado_Servic=?, Proveedor_Item=?, Reprogr_Servic=?, Tecnic=?, Fecha_Programada=?,Hora_Programada=?, Observaciones=?"+
+                " Where idOrdenDeT=?";
+        
+        try {
+            PreparedStatement pst = cn.prepareStatement(sSql);
+            
+            pst.setInt(1, dts.getIdItem());
+            pst.setString(2, dts.getFechaReporte());
+            pst.setString(3, dts.getHoraReporte());
+            pst.setString(4, dts.getC_Costo_Nro_ATM());
+            pst.setString(5, dts.getTipoLocal());
+            pst.setString(6, dts.getNomLocal());
+            pst.setString(7, dts.getZonaLocal());
+            pst.setString(8, dts.getTipoSolicitud());
+            pst.setString(9, dts.getDetalleSolicitud());
+            pst.setInt(10, dts.getNro_OT());
+            pst.setString(11, dts.getLvl_servic());
+            pst.setString(12, dts.getEstado_servic());
+            pst.setString(13, dts.getProveedor_Item());
+            pst.setString(14, dts.getReprog_Servic());
+            pst.setString(15, dts.getTecnic());
+            pst.setString(16, dts.getFecha_Programada());
+            pst.setString(17, dts.getHora_Programada());
+            pst.setString(18, dts.getObservaciones());
+            pst.setInt(19, dts.getIdOrdendeT());
+            
+            int n = pst.executeUpdate();
+            if(n!=0){
+                return true;                
+            }
+            else{
+                return false;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            return false;
+        }
+    }
     
 }

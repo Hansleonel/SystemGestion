@@ -79,7 +79,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel3MouseClicked(evt);
@@ -87,7 +87,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 120, 30));
 
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -109,7 +109,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -117,7 +117,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 120, 30));
 
-        Lbl_OT_Crear_Aceptar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Aceptar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Lbl_OT_Crear_Aceptar_OT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Crear_Aceptar_OTMouseClicked(evt);
@@ -125,7 +125,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Crear_Aceptar_OT, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 60, 60));
 
-        Lbl_OT_Crear_Enviar_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Enviar_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Lbl_OT_Crear_Enviar_Mail.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Crear_Enviar_MailMouseClicked(evt);
@@ -133,7 +133,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Crear_Enviar_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 60, 60));
 
-        Lbl_OT_Crear_Actualizar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Actualizar_OT.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Lbl_OT_Crear_Actualizar_OT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Crear_Actualizar_OTMouseClicked(evt);
@@ -141,7 +141,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Crear_Actualizar_OT, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 60, 60));
 
-        Lbl_OT_Crear_Buscar_UPS.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Crear_Buscar_UPS.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Lbl_OT_Crear_Buscar_UPS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Crear_Buscar_UPSMouseClicked(evt);
