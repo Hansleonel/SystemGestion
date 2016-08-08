@@ -141,8 +141,14 @@ public class FrmGestion_OT_Editar extends javax.swing.JFrame {
         jTextField14.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         jTextField14.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, 120, 20));
+
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 120, 30));
+
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 120, 30));
+
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 120, 30));
 
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -152,13 +158,28 @@ public class FrmGestion_OT_Editar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 60, 60));
+
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 440, 60, 60));
+
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 60, 60));
 
         jTextField15.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         jTextField15.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 110, 110, -1));
 
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -210,6 +231,7 @@ public class FrmGestion_OT_Editar extends javax.swing.JFrame {
             L_OTEventos func = new L_OTEventos();
             model = func.MostrandoEventos(jTextField15.getText());
             jTable1.setModel(model);
+            Ocultar_Columnas_OT();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
@@ -274,6 +296,22 @@ public class FrmGestion_OT_Editar extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
+        try {
+            DefaultTableModel model;
+            L_OTEventos func = new L_OTEventos();
+            model = func.MostrandoEventos(jTextField15.getText());
+            jTable1.setModel(model);
+            Ocultar_Columnas_OT();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -344,4 +382,34 @@ public class FrmGestion_OT_Editar extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    private void Ocultar_Columnas_OT() {
+        jTable1.getColumnModel().getColumn(0).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(0).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(0).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(3).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(3).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(3).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(4).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(4).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(4).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(5).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(5).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(5).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(7).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(7).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(7).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(8).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(8).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(8).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(11).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(11).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(11).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(14).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(14).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(14).setPreferredWidth(0);
+        jTable1.getColumnModel().getColumn(15).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(15).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(15).setPreferredWidth(0);
+    }
 }

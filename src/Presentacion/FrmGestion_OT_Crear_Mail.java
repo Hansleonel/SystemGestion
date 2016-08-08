@@ -8,6 +8,8 @@ package Presentacion;
 import Datos.D_Mail;
 import Logica.L_Mail;
 import com.sun.awt.AWTUtilities;
+import java.io.File;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -60,6 +62,7 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -68,6 +71,12 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 120, 30));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 120, 30));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 120, 30));
+
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 230, 120, 30));
 
         jTextArea1.setColumns(20);
@@ -109,6 +118,20 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         // TODO add your handling code here:
         Enviar_OT_Mail();
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        JFileChooser Archive = new JFileChooser();
+        File Ruta = new File("C:/");
+        
+        Archive.setCurrentDirectory(Ruta);
+        int res = Archive.showOpenDialog(null);
+        
+        if(res == JFileChooser.APPROVE_OPTION){
+            File Arch = Archive.getSelectedFile();
+            jTextField4.setText(String.valueOf(Arch));
+        }
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -168,7 +191,7 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         dts.setUser("monitoreosistelec@outlook.com");
         dts.setPassword("Mhne12/Dic,4");
         dts.setArchiveDir(jTextField4.getText());
-        dts.setArchiveName(" ");
+        dts.setArchiveName("Archivo.png");
         dts.setDestine(jTextField2.getText().trim());
         dts.setAsunto(jTextField1.getText());
         dts.setMensaje(jTextArea1.getText());

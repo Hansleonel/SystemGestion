@@ -15,7 +15,9 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
      * Creates new form FrmGestion_OT_Eventos_Special_Search
      */
     public FrmGestion_OT_Eventos_Special_Search() {
+        this.setUndecorated(true);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -49,6 +51,12 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 120, 30));
+
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
@@ -122,6 +130,11 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         form_ot_eventos_special_parametro_segundo.toFront();
     }//GEN-LAST:event_jLabel3MouseClicked
 
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel5MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -166,8 +179,8 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    public static javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables

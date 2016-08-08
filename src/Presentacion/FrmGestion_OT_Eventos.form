@@ -28,7 +28,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Agregar">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
       <Events>
@@ -43,9 +43,12 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Mail">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Lbl_OT_Eventos_MailMouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="760" y="490" width="60" height="60"/>
@@ -55,7 +58,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Actualizar">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
       <Events>
@@ -70,7 +73,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_ConvToExel">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
       <Events>
@@ -85,9 +88,12 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Busqueda_Detallada">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Lbl_OT_Eventos_Busqueda_DetalladaMouseClicked"/>
+      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="810" y="50" width="120" height="30"/>
@@ -97,7 +103,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Pendientes">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
       <Events>
@@ -132,7 +138,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Buscar">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Cursor de Mano"/>
         </Property>
       </Properties>
       <Events>

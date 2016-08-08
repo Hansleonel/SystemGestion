@@ -55,7 +55,7 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Lbl_OT_Eventos_Agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_Agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Lbl_OT_Eventos_Agregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Eventos_AgregarMouseClicked(evt);
@@ -63,10 +63,15 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Eventos_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 60, 60));
 
-        Lbl_OT_Eventos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Eventos_Mail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Eventos_MailMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_OT_Eventos_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
 
-        Lbl_OT_Eventos_Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Lbl_OT_Eventos_Actualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Eventos_ActualizarMouseClicked(evt);
@@ -74,7 +79,7 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Eventos_Actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
 
-        Lbl_OT_Eventos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Lbl_OT_Eventos_ConvToExel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Eventos_ConvToExelMouseClicked(evt);
@@ -82,10 +87,15 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Eventos_ConvToExel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 60, 60));
 
-        Lbl_OT_Eventos_Busqueda_Detallada.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_Busqueda_Detallada.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_OT_Eventos_Busqueda_Detallada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_OT_Eventos_Busqueda_DetalladaMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_OT_Eventos_Busqueda_Detallada, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, 120, 30));
 
-        Lbl_OT_Eventos_Pendientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_Pendientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Lbl_OT_Eventos_Pendientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Eventos_PendientesMouseClicked(evt);
@@ -107,7 +117,7 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         });
         getContentPane().add(Lbl_OT_Eventos_Min, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
-        Lbl_OT_Eventos_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_OT_Eventos_Buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Lbl_OT_Eventos_Buscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Lbl_OT_Eventos_BuscarMouseClicked(evt);
@@ -188,6 +198,20 @@ public class FrmGestion_OT_Eventos extends javax.swing.JFrame {
         form_ot_editar.setVisible(true);
         form_ot_editar.toFront();
     }//GEN-LAST:event_Lbl_OT_Eventos_ActualizarMouseClicked
+
+    private void Lbl_OT_Eventos_MailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Eventos_MailMouseClicked
+        // TODO add your handling code here:
+        FrmGestion_OT_Crear_Mail form_ot_crear_mail = new FrmGestion_OT_Crear_Mail();
+        form_ot_crear_mail.setVisible(true);
+        form_ot_crear_mail.toFront();
+    }//GEN-LAST:event_Lbl_OT_Eventos_MailMouseClicked
+
+    private void Lbl_OT_Eventos_Busqueda_DetalladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Eventos_Busqueda_DetalladaMouseClicked
+        // TODO add your handling code here:
+        FrmGestion_OT_Eventos_Special_Search form_ot_eventos_special = new FrmGestion_OT_Eventos_Special_Search();
+        form_ot_eventos_special.setVisible(true);
+        form_ot_eventos_special.toFront();
+    }//GEN-LAST:event_Lbl_OT_Eventos_Busqueda_DetalladaMouseClicked
 
     /**
      * @param args the command line arguments
