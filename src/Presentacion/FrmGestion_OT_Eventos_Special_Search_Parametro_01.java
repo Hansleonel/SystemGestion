@@ -16,7 +16,9 @@ public class FrmGestion_OT_Eventos_Special_Search_Parametro_01 extends javax.swi
      */
     String Parametro="";
     public FrmGestion_OT_Eventos_Special_Search_Parametro_01() {
+        this.setUndecorated(true);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -98,6 +100,12 @@ public class FrmGestion_OT_Eventos_Special_Search_Parametro_01 extends javax.swi
             }
         });
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 120, 30));
+
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
@@ -110,50 +118,63 @@ public class FrmGestion_OT_Eventos_Special_Search_Parametro_01 extends javax.swi
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         Parametro="idItem";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
         Parametro="C_Costo_Nro_ATM";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
         Parametro="DetalleSolicitud";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
         Parametro="Proveedor_Item";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
         Parametro="FechaReporte";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
         Parametro="NomLocal";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
         Parametro="Nro_OT";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
         Parametro="Fecha_Programada";
-        FrmGestion_OT_Eventos_Special_Search.jTextField1.setText(Parametro);
+        FrmGestion_OT_Eventos_Special_Search.Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setText(Parametro);
+        dispose();
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments

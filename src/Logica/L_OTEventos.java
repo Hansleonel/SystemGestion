@@ -238,5 +238,52 @@ public class L_OTEventos {
             return false;
         }
     }
+
+    public DefaultTableModel MostrandoEventos_Special_Search(String parametro_01, String tipo_parametro_01, String parametro_02, String tipo_parametro_02) {
+        
+        DefaultTableModel model;
+        
+        String[] titulos = {"ItemOT","IdItem","FechaReporte","Hora de Reporte","Centro_Costo","Tipo_Local","Nombr_Local",
+                        "Zona Local","Tipo Solicitud", "Detalle Solicitud", "Numero_OT","Lvl_Servic","Estado Servic",
+                        "Proveedor ITEM","Reprogrmc","Tecnic o","Fecha Progrmada","Hora Programa", "Observaciones" };            
+        String[] registr = new String[19];
+        
+        model = new DefaultTableModel(null, titulos);
+        
+        sSql="SELECT * FROM otinformacion_prb WHERE "+tipo_parametro_01+"= '"+parametro_01+"' and "+tipo_parametro_02+" like '%"+parametro_02+"%'";
+        
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sSql);
+            
+            while(rs.next()){
+                registr[0]=rs.getString("idOrdenDeT");
+                registr[1]=rs.getString("idItem");
+                registr[2]=rs.getString("FechaReporte");
+                registr[3]=rs.getString("HoraReporte");
+                registr[4]=rs.getString("C_Costo_Nro_ATM");
+                registr[5]=rs.getString("TipoLocal");
+                registr[6]=rs.getString("NomLocal");
+                registr[7]=rs.getString("ZonaLocal");
+                registr[8]=rs.getString("TipoSolicitud");
+                registr[9]=rs.getString("DetalleSolicitud");
+                registr[10]=rs.getString("Nro_OT");
+                registr[11]=rs.getString("Lvl_Servic");
+                registr[12]=rs.getString("Estado_Servic");
+                registr[13]=rs.getString("Proveedor_Item");
+                registr[14]=rs.getString("Reprogr_Servic");
+                registr[15]=rs.getString("Tecnic");
+                registr[16]=rs.getString("Fecha_Programada");
+                registr[17]=rs.getString("Hora_Programada");
+                registr[18]=rs.getString("Observaciones");
+                
+                model.addRow(registr);
+            }
+            return model;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            return null;
+        }
+    }
     
 }

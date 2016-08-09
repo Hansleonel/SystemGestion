@@ -5,6 +5,10 @@
  */
 package Presentacion;
 
+import Logica.L_OTEventos;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Hans
@@ -18,6 +22,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         this.setUndecorated(true);
         initComponents();
         this.setLocationRelativeTo(null);
+        jScrollPane1.setVisible(false);
     }
 
     /**
@@ -33,10 +38,10 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Txt_OT_Eventos_Buscar_Tipo_Parametro_01 = new javax.swing.JTextField();
+        Txt_OT_Eventos_Buscar_Tipo_Parametro_02 = new javax.swing.JTextField();
+        Txt_OT_Eventos_Buscar_Parametro_01 = new javax.swing.JTextField();
+        Txt_OT_Eventos_Buscar_Parametro_02 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -45,6 +50,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -60,6 +66,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 10, 20));
 
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel3MouseClicked(evt);
@@ -67,22 +74,23 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 120, 30));
 
-        jTextField1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 110, -1));
+        Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_OT_Eventos_Buscar_Tipo_Parametro_01.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_OT_Eventos_Buscar_Tipo_Parametro_01, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 110, -1));
 
-        jTextField2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTextField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 110, -1));
+        Txt_OT_Eventos_Buscar_Tipo_Parametro_02.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_OT_Eventos_Buscar_Tipo_Parametro_02.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_OT_Eventos_Buscar_Tipo_Parametro_02, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 110, -1));
 
-        jTextField3.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 225, 250, -1));
+        Txt_OT_Eventos_Buscar_Parametro_01.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_OT_Eventos_Buscar_Parametro_01.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_OT_Eventos_Buscar_Parametro_01, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 225, 250, -1));
 
-        jTextField4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        jTextField4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 225, 240, -1));
+        Txt_OT_Eventos_Buscar_Parametro_02.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Txt_OT_Eventos_Buscar_Parametro_02.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        getContentPane().add(Txt_OT_Eventos_Buscar_Parametro_02, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 225, 240, -1));
 
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -90,7 +98,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 120, 30));
 
-        jTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 11)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -114,6 +122,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         // TODO add your handling code here:
+        Buscar_Eventos_Special_Search(Txt_OT_Eventos_Buscar_Parametro_01.getText(),Txt_OT_Eventos_Buscar_Tipo_Parametro_01.getText(),Txt_OT_Eventos_Buscar_Parametro_02.getText(),Txt_OT_Eventos_Buscar_Tipo_Parametro_02.getText());
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -171,6 +180,10 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Txt_OT_Eventos_Buscar_Parametro_01;
+    private javax.swing.JTextField Txt_OT_Eventos_Buscar_Parametro_02;
+    public static javax.swing.JTextField Txt_OT_Eventos_Buscar_Tipo_Parametro_01;
+    public static javax.swing.JTextField Txt_OT_Eventos_Buscar_Tipo_Parametro_02;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -179,9 +192,17 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    public static javax.swing.JTextField jTextField1;
-    public static javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
+
+    private void Buscar_Eventos_Special_Search(String parametro_01, String tipo_parametro_01, String parametro_02, String tipo_parametro_02) {
+        jScrollPane1.setVisible(true);
+        try {
+            DefaultTableModel model;
+            L_OTEventos func = new L_OTEventos();
+            model = func.MostrandoEventos_Special_Search(parametro_01,tipo_parametro_01,parametro_02,tipo_parametro_02);
+            jTable1.setModel(model);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }
 }
