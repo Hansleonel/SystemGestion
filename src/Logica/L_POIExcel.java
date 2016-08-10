@@ -80,7 +80,7 @@ public class L_POIExcel {
                 for(int i = -1; i < numfila; i++){
                     //esta linea posiciona donde se empezara a escribir en este caso en la fila 4
                     //recuerda que tanto fila como columna inician su conteo con 0
-                    fila = hoja.getRow(i+5);
+                    fila = hoja.getRow(i+12);
                     for(int j = 0; j < numcolumn; j++){
                         celda = fila.getCell(j);
                         if(i == -1){
