@@ -7,7 +7,9 @@ package Presentacion;
 
 import Logica.L_OTImagenes;
 import com.sun.awt.AWTUtilities;
+import java.awt.Desktop;
 import java.awt.Image;
+import java.net.URI;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -64,16 +66,40 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 10, 20));
 
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 600, 130, 30));
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 590, 60, 60));
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 590, 60, 60));
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 590, 60, 60));
+
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 180, 170));
+
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 190, 170));
+
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 180, 170));
+
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 190, 170));
+
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 180, 170));
+
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 190, 170));
+
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 60, 450, 500));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmOTImagenes.png"))); // NOI18N
@@ -96,6 +122,34 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        try {
+            if(Desktop.isDesktopSupported()){
+                Desktop dekst = Desktop.getDesktop();
+                if(dekst.isSupported(Desktop.Action.BROWSE)){
+                    //recordar usar una variabl enviada de acuerdo a la ubicacion desde el table en special searc
+                    //dekst.browse(new URI("C:/Phots/5030/5030/1.jpg"));
+                    //dekst.browse(new URI(""));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        try {
+            if(Desktop.isDesktopSupported()){
+                Desktop desktDocu = Desktop.getDesktop();
+                if(desktDocu.isSupported(Desktop.Action.BROWSE)){
+                    //desktDocu.browse(new URI(""));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -161,26 +215,29 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
-        
-        Image imagn1 = getToolkit().getImage(jTable1.getValueAt(0, 6).toString());
+        //este uso se da con DB
+        //Image imgn = getToolkit().getImage(jTable1.getValueAt(0, 6).toString());
+        //este uso se da directamente con la dirccin de cada imagen
+        Image imagn1 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+"\\1.jpg");
         imagn1 = imagn1.getScaledInstance(190, 173, Image.SCALE_DEFAULT);
         jLabel2.setIcon(new ImageIcon(imagn1));
-        Image imagn2 = getToolkit().getImage(jTable1.getValueAt(0, 7).toString());
+        //jLabel2.setIcon(new ImageIcon("C:\\Phots\\"+buscar+"\\"+buscar+".jpg"));
+        Image imagn2 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+"\\2.jpg");
         imagn2 = imagn2.getScaledInstance(190, 173, Image.SCALE_DEFAULT);
         jLabel3.setIcon(new ImageIcon(imagn2));
-        Image imagn3 = getToolkit().getImage(jTable1.getValueAt(0, 8).toString());
+        Image imagn3 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+"\\3.jpg");
         imagn3 = imagn3.getScaledInstance(190, 173, Image.SCALE_DEFAULT);
         jLabel4.setIcon(new ImageIcon(imagn3));
-        Image imagn4 = getToolkit().getImage(jTable1.getValueAt(0, 9).toString());
+        Image imagn4 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+"\\4.jpg");
         imagn4 = imagn4.getScaledInstance(190, 173, Image.SCALE_DEFAULT);
         jLabel5.setIcon(new ImageIcon(imagn4));
-        Image imagn5 = getToolkit().getImage(jTable1.getValueAt(0, 10).toString());
+        Image imagn5 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+"\\5.jpg");
         imagn5 = imagn5.getScaledInstance(190, 173, Image.SCALE_DEFAULT);
         jLabel6.setIcon(new ImageIcon(imagn5));
-        Image imagn6 = getToolkit().getImage(jTable1.getValueAt(0, 11).toString());
+        Image imagn6 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+"\\6.jpg");
         imagn6 = imagn6.getScaledInstance(190, 173, Image.SCALE_DEFAULT);
         jLabel7.setIcon(new ImageIcon(imagn6));
-        Image imagn7 = getToolkit().getImage(jTable1.getValueAt(0, 5).toString());
+        Image imagn7 = getToolkit().getImage("C:\\Phots\\"+buscar+"\\"+buscar+".jpg");
         imagn7 = imagn7.getScaledInstance(456, 503, Image.SCALE_DEFAULT);
         jLabel8.setIcon(new ImageIcon(imagn7));        
     }

@@ -11,6 +11,7 @@ import com.sun.awt.AWTUtilities;
 import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -50,6 +51,7 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -106,6 +108,9 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmOTCrearMail.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jTextField5.setText("jTextField5");
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -129,6 +134,8 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         
         if(res == JFileChooser.APPROVE_OPTION){
             File Arch = Archive.getSelectedFile();
+            FileNameExtensionFilter a;
+            jTextField5.setText(String.valueOf(Arch.getName()));
             jTextField4.setText(String.valueOf(Arch));
         }
     }//GEN-LAST:event_jLabel5MouseClicked
@@ -182,6 +189,7 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 
     private void Enviar_OT_Mail() {
@@ -191,7 +199,7 @@ public class FrmGestion_OT_Crear_Mail extends javax.swing.JFrame {
         dts.setUser("monitoreosistelec@outlook.com");
         dts.setPassword("Mhne12/Dic,4");
         dts.setArchiveDir(jTextField4.getText());
-        dts.setArchiveName("Archivo.png");
+        dts.setArchiveName(jTextField5.getText());
         dts.setDestine(jTextField2.getText().trim());
         dts.setAsunto(jTextField1.getText());
         dts.setMensaje(jTextArea1.getText());

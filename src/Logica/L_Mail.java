@@ -30,7 +30,7 @@ public class L_Mail {
             Properties propert = new Properties();
             propert.put("mail.smtp.host", "smtp.live.com");
             propert.setProperty("mail.smtp.starttls.enable", "true");
-            propert.setProperty("mail.smtp.port", "25");
+            propert.setProperty("mail.smtp.port", "587");
             propert.setProperty("mail.smtp.user", dts.getUser());
             propert.setProperty("mail.smtp.auth", "true");
             

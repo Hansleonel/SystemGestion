@@ -95,7 +95,7 @@ public class L_POIExcel {
                 //EN CSAO LAS CELDAS ESTE VACIAS
                 //ESCRIBIMOS UN VALOR SOBRE ELLAS
                 for(int i = -1; i < numfila; i++){
-                    Row filaV = hoja.createRow(i+5);
+                    Row filaV = hoja.createRow(i+14);
                     for(int j = 0; j < numcolumn; j++){
                         Cell celdaV= filaV.createCell(j);
                         if(i == -1){
