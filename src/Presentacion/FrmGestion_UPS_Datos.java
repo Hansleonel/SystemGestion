@@ -5,6 +5,7 @@
  */
 package Presentacion;
 
+import Logica.L_POIExcel;
 import Logica.L_UPSDatos;
 import com.sun.awt.AWTUtilities;
 import javax.swing.JOptionPane;
@@ -66,13 +67,18 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 10, 20));
 
-        Lbl_UPS_Datos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_ConvToExel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Lbl_UPS_Datos_ConvToExel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_UPS_Datos_ConvToExelMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_UPS_Datos_ConvToExel, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 490, 50, 50));
 
         Lbl_UPS_Datos_Agregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 50, 50));
 
-        Lbl_UPS_Datos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_Mail.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(Lbl_UPS_Datos_Mail, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 50, 50));
 
         Lbl_UPS_Datos_Actualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -158,6 +164,15 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
         // TODO add your handling code here:
         setExtendedState(FrmGestion_UPS_Datos.CROSSHAIR_CURSOR);
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void Lbl_UPS_Datos_ConvToExelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_ConvToExelMouseClicked
+        // TODO add your handling code here:
+        L_POIExcel convr_tbl_to_exel = new L_POIExcel();
+        try {
+            convr_tbl_to_exel.Exportar(Tbl_UPS_Datos_Mostrando);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_Lbl_UPS_Datos_ConvToExelMouseClicked
 
     /**
      * @param args the command line arguments

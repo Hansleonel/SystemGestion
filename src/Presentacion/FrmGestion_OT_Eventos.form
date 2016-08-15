@@ -28,7 +28,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Agregar">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
@@ -43,7 +43,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Mail">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
@@ -58,7 +58,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Actualizar">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
@@ -73,7 +73,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_ConvToExel">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
@@ -88,7 +88,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Busqueda_Detallada">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
@@ -103,7 +103,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Pendientes">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
@@ -138,7 +138,7 @@
     <Component class="javax.swing.JLabel" name="Lbl_OT_Eventos_Buscar">
       <Properties>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor de Mano"/>
+          <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>

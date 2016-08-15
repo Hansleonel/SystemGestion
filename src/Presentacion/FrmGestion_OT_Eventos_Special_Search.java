@@ -203,12 +203,10 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TODO add your handling code here:
-        L_POIExcel func = new L_POIExcel();
-        try {
-            func.Exportar_To_Mcr();
-        } catch (Exception e) {
-        }
+        // TODO add your handling code here:    
+        FrmGestion_OT_Eventos_Special_Search_Mensual form_eventos_mensual = new FrmGestion_OT_Eventos_Special_Search_Mensual();
+        form_eventos_mensual.setVisible(true);
+        form_eventos_mensual.toFront();        
     }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
