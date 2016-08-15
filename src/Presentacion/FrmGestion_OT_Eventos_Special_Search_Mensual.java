@@ -46,6 +46,12 @@ public class FrmGestion_OT_Eventos_Special_Search_Mensual extends javax.swing.JF
             }
         });
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 120, 30));
+
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 120, 30));
 
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -75,6 +81,15 @@ public class FrmGestion_OT_Eventos_Special_Search_Mensual extends javax.swing.JF
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        L_POIExcel informe_mensual_servic = new L_POIExcel();
+        try {
+            informe_mensual_servic.Servic_Realizados();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments
