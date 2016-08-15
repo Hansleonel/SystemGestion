@@ -175,11 +175,15 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
 
     private void Lbl_UPS_Datos_Detalle_Ubicar_DireccionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_Detalle_Ubicar_DireccionMouseClicked
         // TODO add your handling code here:
+        String Direction;
+        Direction = Txt_UPS_Datos_Detalle_Direccion.getText();
+        Direction = Direction.replace(' ', '+');
         try {
             if(Desktop.isDesktopSupported()){
                 Desktop desktop = Desktop.getDesktop();
                 if(desktop.isSupported(Desktop.Action.BROWSE)){
-                    desktop.browse(new URI("https://www.google.com.pe/maps/place/BBVA+Banco+Continental/@-12.0719335,-77.0382145,18z/data=!4m8!1m2!2m1!1sbbva!3m4!1s0x0:0x43eeb3f9488b7093!8m2!3d-12.071611!4d-77.0374209"));
+                    //desktop.browse(new URI("https://www.google.com.pe/maps/place/BBVA+Banco+Continental/@-12.0719335,-77.0382145,18z/data=!4m8!1m2!2m1!1sbbva!3m4!1s0x0:0x43eeb3f9488b7093!8m2!3d-12.071611!4d-77.0374209"));
+                    desktop.browse(new URI("https://www.google.com.pe/maps?q="+Direction+"&bav=on.2,or.r_cp.&bvm=bv.129422649,d.eWE&biw=1366&bih=643&dpr=1&um=1&ie=UTF-8&sa=X&ved=0ahUKEwil8L_Y28LOAhVL5SYKHe0hAZUQ_AUIBigB"));
                 }
             }
         } catch (Exception e) {
