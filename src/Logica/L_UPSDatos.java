@@ -5,7 +5,9 @@
  */
 package Logica;
 
+import Datos.D_UpsDatos;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
@@ -138,6 +140,53 @@ public class L_UPSDatos {
             JOptionPane.showMessageDialog(null, e);
             return null;
         }
+    }
+
+    public boolean editar_ups(D_UpsDatos dts) {
+        sSql = "UPDATE upsinformacion_prb SET NomLocal=?, DirLocal=?, C_CostoLocal=?, Nro_ATM=?, TIpoLocal=?, EstadoLocal=?, EstadoUPS=?, EstadoMonitoreo=?, Desc_UPS=?, Capacidad_UPS=?, Marca_UPS=?, IP_UPS=?, GW_UPS=?, Msc_UPS=?, Nro_Serie_UPS=?, Fecha_Garantia=?, Estado_Garantia=?, Periodo_de_Garantia=?, Propietario=?, ProveedorUPS=?, Provincia_UPS=?, Ciudad_Distrito_UPS=?, Territorio_UPS=?, Mantenimiento_UPS=?"+
+                " WHERE idInformacion_UPS = ?";
+        
+        try {
+            PreparedStatement pst = cn.prepareStatement(sSql);
+            pst.setString(1,dts.getNomLocal());
+            pst.setString(2,dts.getDirLocal());
+            pst.setString(3,dts.getC_CostoLocal());
+            pst.setString(4,dts.getNro_ATM());
+            pst.setString(5,dts.getTipoLocal());
+            pst.setString(6,dts.getEstadoLocal());
+            pst.setString(7,dts.getEstadoUPS());
+            pst.setString(8,dts.getEstadoMonitoreo());
+            pst.setString(9,dts.getDesc_UPS());
+            pst.setString(10,dts.getCapacidad_UPS());
+            pst.setString(11,dts.getMarca_UPS());
+            pst.setString(12,dts.getIP_UPS());
+            pst.setString(13,dts.getGW_UPS());
+            pst.setString(14,dts.getMsc_UPS());
+            pst.setString(15,dts.getNro_Serie_UPS());
+            pst.setString(16,dts.getFecha_Garantia());
+            pst.setString(17,dts.getEstado_Garantia());
+            pst.setString(18,dts.getPeriodo());
+            pst.setString(19,dts.getPropietario());
+            pst.setString(20,dts.getProveedr());
+            pst.setString(21,dts.getProvincia());
+            pst.setString(22,dts.getCiudad());
+            pst.setString(23,dts.getTerritr());
+            pst.setString(24,dts.getMantenimientoProgrm());
+            pst.setInt(25, dts.getIdInformacion_UPS());
+            
+            int n = pst.executeUpdate();
+            
+            if(n!=0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+            return false;
+        }
+                
     }
     
 }

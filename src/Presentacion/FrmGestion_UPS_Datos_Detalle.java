@@ -5,6 +5,7 @@
  */
 package Presentacion;
 
+import Datos.D_UpsDatos;
 import Logica.L_UPSDatos;
 import static Presentacion.FrmGestion_UPS_Datos.UbicarPuntoUPS;
 import com.sun.awt.AWTUtilities;
@@ -108,6 +109,11 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         getContentPane().add(Lbl_UPS_Datos_Detalle_Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 490, 60, 60));
 
         Lbl_UPS_Datos_Detalle_ActualizarD.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Lbl_UPS_Datos_Detalle_ActualizarD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Lbl_UPS_Datos_Detalle_ActualizarDMouseClicked(evt);
+            }
+        });
         getContentPane().add(Lbl_UPS_Datos_Detalle_ActualizarD, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 60, 60));
 
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -198,6 +204,45 @@ public class FrmGestion_UPS_Datos_Detalle extends javax.swing.JFrame {
         form_OT_Eventos_from_UPS_Detalles.Buscar_Eventos(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 1).toString());
         
     }//GEN-LAST:event_Lbl_UPS_Datos_Detalle_EventosMouseClicked
+
+    private void Lbl_UPS_Datos_Detalle_ActualizarDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_UPS_Datos_Detalle_ActualizarDMouseClicked
+        // TODO add your handling code here:
+        D_UpsDatos dts = new D_UpsDatos();
+        L_UPSDatos func = new L_UPSDatos();
+        
+        dts.setIdInformacion_UPS(Integer.parseInt(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 0).toString()));
+        dts.setNomLocal(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 1).toString());
+        dts.setDirLocal(Txt_UPS_Datos_Detalle_Direccion.getText());
+        dts.setC_CostoLocal(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 3).toString());
+        dts.setNro_ATM(Txt_UPS_Datos_Detalle_NroATM.getText());
+        dts.setTipoLocal(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 5).toString());
+        dts.setEstadoLocal(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 6).toString());
+        dts.setEstadoUPS(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 7).toString());
+        dts.setEstadoMonitoreo(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 8).toString());
+        dts.setDesc_UPS(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 9).toString());
+        dts.setCapacidad_UPS(Txt_UPS_Datos_Detalle_Capacidad.getText());
+        dts.setMarca_UPS(Txt_UPS_Datos_Detalle_MarcaModel.getText());
+        dts.setIP_UPS(Txt_UPS_Datos_Detalle_IP.getText());
+        dts.setGW_UPS(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 13).toString());
+        dts.setMsc_UPS(Txt_UPS_Datos_Detalle_MarcaModel.getText());
+        dts.setNro_Serie_UPS(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 15).toString());
+        dts.setFecha_Garantia(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 16).toString());
+        dts.setEstado_Garantia(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 17).toString());
+        dts.setPeriodo(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 18).toString());
+        dts.setPropietario(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 19).toString());
+        dts.setProveedr(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 20).toString());
+        dts.setProvincia(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 21).toString());
+        dts.setCiudad(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 22).toString());
+        dts.setTerritr(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 23).toString());
+        dts.setMantenimientoProgrm(Tbl_UPS_Datos_Detalle_Mostrar.getValueAt(0, 24).toString());
+        
+        try {
+            if(func.editar_ups(dts)){
+                JOptionPane.showMessageDialog(rootPane, "Se edito Correctamente");
+            };
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_Lbl_UPS_Datos_Detalle_ActualizarDMouseClicked
 
     /**
      * @param args the command line arguments

@@ -264,17 +264,17 @@ public class Excelpoi {
                 //Acceso a la hoja de trabajo
                 XSSFSheet hoja = xlsx.getSheetAt(0);
                 //Declaracion de fila y celda
-                Row fila = null;
-                Cell celda = null;
+                Row fila;
+                Cell celda;
 
                 
                 try
                 {
                     //Asignando a valores a celdas con valores
-                    fila = hoja.getRow(0);
+                    fila = hoja.getRow(2);
                     
-                    celda = fila.getCell(0);
-                    celda.setCellValue(1);
+                    celda = fila.getCell(9);
+                    celda.setCellValue(801);
                     
                     
                     fila = hoja.getRow(7);
@@ -286,14 +286,14 @@ public class Excelpoi {
                 catch(NullPointerException NPE)
                 {
                     //En caso de que las celdas esten vacias hay que crearlas
-                    fila = hoja.createRow(0);
+                    fila = hoja.createRow(2);
                     
-                    celda = fila.createCell(0);
-                    celda.setCellValue(999);
+                    celda = fila.createCell(9);
+                    celda.setCellValue(903);
                     
-                    fila = hoja.createRow(0);
+                    fila = hoja.createRow(2);
                     
-                    celda = fila.createCell(0);
+                    celda = fila.createCell(10);
                     celda.setCellValue(9999999);
                     
                 }
