@@ -120,5 +120,9 @@ public class L_POIExcel {
             salida.close();
         }
     }
+
+    public void Exportar_To_Mcr() throws Exception{
+        
+    }
     
 }

@@ -315,7 +315,7 @@ public class Excelpoi {
 
     public void segnd(JTable jTable1) throws Exception{
         JFileChooser selector = new JFileChooser();
-        selector.setFileFilter(new FileNameExtensionFilter("Archivo Excel 2010 o Mayor", "xlsx"));
+        selector.setFileFilter(new FileNameExtensionFilter("Archivo Excel 2010 o Mayor", "xlsm"));
         int numfila = jTable1.getRowCount();
         int numcolumn = jTable1.getColumnCount();
         String directorio = "";
@@ -350,68 +350,56 @@ public class Excelpoi {
         }
         
                    
-            if (extension.equals("xlsx"))
+            if (extension.equals("xlsm"))
             {
-                //Leer el archivo de Excel XLSX
                 FileInputStream entrada = new FileInputStream(new File(directorio));
                 //Acceso al libro de trabajo
-                XSSFWorkbook xlsx = new XSSFWorkbook(entrada); 
+                XSSFWorkbook xlsm = new XSSFWorkbook(entrada); 
                 //Acceso a la hoja de trabajo
-                XSSFSheet hoja = xlsx.getSheetAt(0);
+                XSSFSheet hoja = xlsm.getSheetAt(0);
                 //Declaracion de fila y celda
                 Row fila = null;
                 Cell celda = null;
-
                 
                 try
                 {
                     //Asignando a valores a celdas con valores
-                    fila = hoja.getRow(0);
+                    fila = hoja.getRow(4);
                     
-                    celda = fila.getCell(0);
-                    celda.setCellValue(1);
+                    celda = fila.getCell(2);
+                    celda.setCellValue(999);
                     
+                    fila = hoja.getRow(5);
                     
-                    fila = hoja.getRow(7);
-                    
-                    celda = fila.getCell(6);
-                    celda.setCellValue(2);
-                    
-                    
+                    celda = fila.getCell(2);
+                    celda.setCellValue(99999);
                 }
                 catch(NullPointerException NPE)
                 {
                     //En caso de que las celdas esten vacias hay que crearlas
+                    fila = hoja.getRow(4);
+					
+                    celda = fila.createCell(2);
+                    celda.setCellValue(7777);
                     
+                    fila = hoja.getRow(5);
                     
-                    
-                    for(int i = -1; i< numfila; i++){
-                        Row fila1 = hoja.createRow(i+1);
-                        for (int j = 0; j <numcolumn; j++){
-                            Cell celda1 = fila1.createCell(j);
-                            if(i == -1){
-                                celda1.setCellValue(String.valueOf(jTable1.getColumnName(j)));
-                            }
-                            else{
-                                celda1.setCellValue(String.valueOf(jTable1.getValueAt(i, j)));
-                            }                    
+                    celda = fila.createCell(2);
+                    celda.setCellValue(77777);
                 }
-            }
-                    
-                }
-
+                
                 //Evaluando formulas de todo el libro de excel
-                XSSFFormulaEvaluator.evaluateAllFormulaCells(xlsx);
-
+                XSSFFormulaEvaluator.evaluateAllFormulaCells(xlsm);
+                
                 //Cerrando la entrada archivo
                 entrada.close();
 
                 //Abriendo archivo para escritura
                 FileOutputStream salida = new FileOutputStream(new File(directorio));
                 //write changes
-                xlsx.write(salida);
+                xlsm.write(salida);
                 //close the stream
-                salida.close(); 
+                salida.close();
             }
     }
 }

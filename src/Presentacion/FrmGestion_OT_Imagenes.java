@@ -6,6 +6,7 @@
 package Presentacion;
 
 import Logica.L_OTImagenes;
+import static Presentacion.FrmGestion_OT_Eventos_Special_Search.UbicarPuntoOT;
 import com.sun.awt.AWTUtilities;
 import java.awt.Desktop;
 import java.awt.Image;
@@ -30,7 +31,8 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
         AWTUtilities.setWindowOpaque(this, false);
         this.setLocationRelativeTo(null);
         jTable1.setVisible(false);
-        Mostar_OT_Imagenes("5030");
+        String buscar = UbicarPuntoOT;
+        Mostar_OT_Imagenes(buscar);
         
     }
 
@@ -85,15 +87,35 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 180, 170));
 
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 190, 170));
 
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 180, 170));
 
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 190, 170));
 
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, 180, 170));
 
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -131,7 +153,7 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
                 if(dekst.isSupported(Desktop.Action.BROWSE)){
                     //recordar usar una variabl enviada de acuerdo a la ubicacion desde el table en special searc
                     //dekst.browse(new URI("C:/Phots/5030/5030/1.jpg"));
-                    //dekst.browse(new URI(""));
+                    dekst.browse(new URI("C:/Phots/"+UbicarPuntoOT+"/"+UbicarPuntoOT+"/1.jpg"));
                 }
             }
         } catch (Exception e) {
@@ -150,6 +172,50 @@ public class FrmGestion_OT_Imagenes extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        try {
+            if(Desktop.isDesktopSupported()){
+                Desktop deskt = Desktop.getDesktop();
+                if(deskt.isSupported(Desktop.Action.BROWSE)){
+                    deskt.browse(new URI("C:/Phots/"+UbicarPuntoOT+"/"+UbicarPuntoOT+"/2.jpg"));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+        try {
+            if(Desktop.isDesktopSupported()){
+                Desktop deskt = Desktop.getDesktop();
+                if(deskt.isSupported(Desktop.Action.BROWSE)){
+                    deskt.browse(new URI("C:/Phots/"+UbicarPuntoOT+"/"+UbicarPuntoOT+"/3.jpg"));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        try {
+            if(Desktop.isDesktopSupported()){
+                Desktop deskt = Desktop.getDesktop();
+                if(deskt.isSupported(Desktop.Action.BROWSE)){
+                    deskt.browse(new URI("C:/Phots/"+UbicarPuntoOT+"/"+UbicarPuntoOT+"/4.jpg"));
+                }
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments

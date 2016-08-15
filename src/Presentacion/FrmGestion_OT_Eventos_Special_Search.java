@@ -48,6 +48,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -113,6 +114,11 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 970, 200));
@@ -130,6 +136,13 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 490, 70, 60));
+
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 50, 120, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/File/FrmOTEventosEspecial.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -176,6 +189,27 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jLabel8MouseClicked
+
+    public static String UbicarPuntoOT;
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        String buscar;
+        int fila = jTable1.rowAtPoint(evt.getPoint());
+        buscar = jTable1.getValueAt(fila, 10).toString();
+        UbicarPuntoOT = buscar;
+        FrmGestion_OT_Imagenes form_ot_imagenes = new FrmGestion_OT_Imagenes();
+        form_ot_imagenes.setVisible(true);
+        form_ot_imagenes.toFront();
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        L_POIExcel func = new L_POIExcel();
+        try {
+            func.Exportar_To_Mcr();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -225,6 +259,7 @@ public class FrmGestion_OT_Eventos_Special_Search extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

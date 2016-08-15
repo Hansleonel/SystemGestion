@@ -136,7 +136,8 @@ public class FrmGestion_Login extends javax.swing.JFrame {
             modelo = function.lorgeo(dts.getIdUsuario(), dts.getPwUsuario());
             Tbl_Login_Ingresar.setModel(modelo);
             if(function.totalregistros==1){
-                FrmGestion_Inicio_Principal form = new FrmGestion_Inicio_Principal();
+                //FrmGestion_Inicio_Principal form = new FrmGestion_Inicio_Principal();
+                FrmGestion_Login_Inicio form = new FrmGestion_Login_Inicio();
                 form.setVisible(true);
                 form.toFront();
                 dispose();
