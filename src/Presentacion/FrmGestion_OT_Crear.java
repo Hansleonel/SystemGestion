@@ -288,7 +288,7 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
         //Completar el codigo para la eleccion de la fechaprogramada
         //Completar el codigo para la eleccion de la fechareprogramac
         Txt_OT_Crear_Fecha_Program.setText("dd/MM/YYYY");
-        Txt_OT_Crear_Hora_Program.setText("Ingrese Hora");
+        Txt_OT_Crear_Hora_Program.setText("Ingrfese Hora");
         
         //la siguientes lineas se peude borrar 
         //solo son usadas para no permitir el null en ningun caso
@@ -369,9 +369,9 @@ public class FrmGestion_OT_Crear extends javax.swing.JFrame {
 
     private void Lbl_OT_Crear_Enviar_MailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Enviar_MailMouseClicked
         // TODO add your handling code here:
-        FrmGestion_OT_Crear_Mail form_ot_crear_mail = new FrmGestion_OT_Crear_Mail();
-        form_ot_crear_mail.setVisible(true);
-        form_ot_crear_mail.toFront();
+        FrmGestion_MS_Crear form_ot_crear_message = new FrmGestion_MS_Crear();
+        form_ot_crear_message.setVisible(true);
+        form_ot_crear_message.toFront();
     }//GEN-LAST:event_Lbl_OT_Crear_Enviar_MailMouseClicked
 
     private void Lbl_OT_Crear_Actualizar_OTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Lbl_OT_Crear_Actualizar_OTMouseClicked

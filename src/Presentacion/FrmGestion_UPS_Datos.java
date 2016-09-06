@@ -133,7 +133,7 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
             model=func.MostrandoDatos(Txt_UPS_Datos_Buscar.getText());
             
             Tbl_UPS_Datos_Mostrando.setModel(model);
-            
+            ocultar_datos_ups();
         } catch (Exception e) {
             JOptionPane.showConfirmDialog(rootPane, e);
         }
@@ -222,4 +222,43 @@ public class FrmGestion_UPS_Datos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
+    private void ocultar_datos_ups() {
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(6).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(6).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(6).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(7).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(7).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(7).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(13).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(13).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(13).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(14).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(14).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(14).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(15).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(15).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(15).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(16).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(16).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(16).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(17).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(17).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(17).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(18).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(18).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(18).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(21).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(21).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(21).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(22).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(22).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(22).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(23).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(23).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(23).setPreferredWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(24).setMaxWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(24).setMinWidth(0);
+        Tbl_UPS_Datos_Mostrando.getColumnModel().getColumn(24).setPreferredWidth(0);
+    }
 }
