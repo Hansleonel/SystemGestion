@@ -32,7 +32,7 @@ public class FrmGestion_Login_Iniciar extends javax.swing.JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            FrmGestion_Inicio_Principal form_inicio_principal = new FrmGestion_Inicio_Principal();
+            FrmGestion_Menu form_inicio_principal = new FrmGestion_Menu();
             form_inicio_principal.setVisible(true);
             form_inicio_principal.toFront();
             t.stop();

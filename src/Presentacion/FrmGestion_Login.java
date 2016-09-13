@@ -137,7 +137,7 @@ public class FrmGestion_Login extends javax.swing.JFrame {
             Tbl_Login_Ingresar.setModel(modelo);
             if(function.totalregistros==1){
                 //FrmGestion_Inicio_Principal form = new FrmGestion_Inicio_Principal();
-                FrmGestion_Login_Inicio form = new FrmGestion_Login_Inicio();
+                FrmGestion_Login_Iniciar form = new FrmGestion_Login_Iniciar();
                 form.setVisible(true);
                 form.toFront();
                 dispose();
